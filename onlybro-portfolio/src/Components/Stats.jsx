@@ -5,13 +5,13 @@ import GradientText from './GradientText'
 
 const Stats = () => {
   return (
-    <div className='flex items-center space-x-6 md:flex-row '>
+    <div className='flex flex-row items-center space-x-6 '>
 
 
 
     
     <div className='flex flex-col items-center justify-center space-y-2'>
-    <FadeContent blur={false} duration={8000} easing="ease-out" initialOpacity={0} delay={800} className='flex flex-col items-center justify-center'>
+    <FadeContent blur={false} duration={8000} easing="ease-out" initialOpacity={0} delay={800} className='flex flex-col items-start justify-center'>
       <GradientText>
       <h1 className='text-4xl font-bold'>5+ </h1>
       </GradientText>
@@ -22,8 +22,32 @@ const Stats = () => {
     </FadeContent>       
     </div>
     
-    <div className='flex flex-col items-center justify-center space-y-2'>
-    <FadeContent blur={false} duration={8000} easing="ease-out" initialOpacity={0} delay={800} className='flex flex-col items-center justify-center'>
+    <div className='flex flex-col items-center justify-center space-y-2 '>
+    <FadeContent blur={false} duration={8000} easing="ease-out" initialOpacity={0} delay={800} className='flex flex-col items-start justify-center'>
+      <GradientText>
+      <h1 className='text-4xl font-bold'>15+ </h1>
+      </GradientText>
+    
+    <GradientText>
+    <h4 className='text-2xl'>Certificates</h4>
+     </GradientText>
+    </FadeContent>       
+    </div>
+    
+    <div className='flex flex-col items-center justify-center space-y-2 '>
+    <FadeContent blur={false} duration={8000} easing="ease-out" initialOpacity={0} delay={800} className='flex flex-col items-start justify-center'>
+      <GradientText>
+      <h1 className='text-4xl font-bold'>15+ </h1>
+      </GradientText>
+    
+    <GradientText>
+    <h4 className='text-2xl'>Certificates</h4>
+     </GradientText>
+    </FadeContent>       
+    </div>
+
+    <div className='flex flex-col items-center justify-center space-y-2 '>
+    <FadeContent blur={false} duration={8000} easing="ease-out" initialOpacity={0} delay={800} className='flex flex-col items-start justify-center'>
       <GradientText>
       <h1 className='text-4xl font-bold'>15+ </h1>
       </GradientText>

@@ -2,17 +2,20 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Brandon';
-  src: url('./assets/Fonts/Brandon.otf') format('opentype');
+  font-family: 'guffber-regular';
+  src: url('./assets/Fonts/guffber-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-family: 'akira';
+  src: url('./assets/Fonts/akira.otf');
 }
 
 
 :root{
     --font-geologica: 'Geologica', sans-serif;
     --font-outfit: 'Outfit', sans-serif;
-    --font-brandon: 'Brandon', sans-serif;
+    --font-avenue: 'guffber-regular', sans-serif;
+    --font-akira:'akira';
 }
 
 body {
@@ -22,7 +25,12 @@ body {
     box-sizing: border-box;
 }
 
-
+.para{
+  font-family: var(--font-guffber-regular);
+}
+.big_heading{
+  font-family: var(--font-akira);
+}
 
 @keyframes shine {
   0% {
@@ -31,4 +39,11 @@ body {
   100% {
     background-position: 200% 0;
   }
+}
+
+/* Utility: gradient border using #ffaa40 → #9c40ff → #ffaa40 */
+.gradient-border {
+    border: 2px solid transparent;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, #ffaa40, #9c40ff, #ffaa40);
 }

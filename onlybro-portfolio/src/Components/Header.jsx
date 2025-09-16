@@ -13,12 +13,12 @@ const Header = () => {
         </a>
 
         {/* Desktop Nav */}
-        <nav className='items-center justify-center hidden px-4 lg:gap-14 lg:flex lg:mx-auto lg:relative lg:py-0 '>
-            <a href="#home" className='text-[18px] font-semibold text-gray-700 hover:text-[#EF7722] transition-all'>Home</a>
-            <a href="#about" className='text-[18px] font-semibold text-gray-700 hover:text-gray-900'>About</a>
-            <a href="#services" className='text-[18px] font-semibold text-gray-700 hover:text-gray-900'>Services</a>
-            <a href="#portfolio" className='text-[18px] font-semibold text-gray-700 hover:text-gray-900'>Projects</a>
-            <a href="#contact" className='text-[18px] font-semibold text-gray-700 hover:text-gray-900'>Contact</a>
+        <nav className='items-center justify-center hidden px-4 lg:gap-14 lg:flex lg:mx-auto lg:relative lg:py-0 big_heading'>
+            <a href="#home" className='text-[14px] font-semibold text-gray-700 hover:text-[#EF7722] transition-all'>Home</a>
+            <a href="#about" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>About</a>
+            <a href="#services" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>Services</a>
+            <a href="#portfolio" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>Projects</a>
+            <a href="#contact" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>Contact</a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -32,7 +32,7 @@ const Header = () => {
           </svg>
         </button>
 
-        <button className='hidden px-4 py-2 text-white transition duration-300 bg-[#b98815] rounded lg:block hover:bg-blue-700'>
+        <button className='hidden px-4 py-2 text-white transition duration-300 bg-[#b98815] rounded lg:block hover:bg-blue-700  big_heading'>
           Let's Connect
         </button>
       </div>
