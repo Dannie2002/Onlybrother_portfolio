@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Components/Header'
 import Hero from './Components/Hero'
-//import About from './Components/About'
+import About from './Components/About'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
        <Header /> 
 
       <Hero />
-     {/* <About /> */}
+      <About /> 
     </main>
   )
 }

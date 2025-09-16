@@ -10,21 +10,21 @@ const About = () => {
   return (
     <div 
       className='relative flex items-center justify-center min-h-screen'
-      style={{
-        backgroundImage: `url(${patternImage})`,
-        backgroundRepeat: 'repeat',
-        backgroundSize: '200px 200px'
-      }}
     >
       {/* Overlay for better text readability */}
-      <div className='absolute inset-0 bg-white/80'></div>
+        <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
+               <div className=" absolute -top-40 -left-40 w-[40rem] h-[40rem] rounded-full bg-[#423f44] opacity-30 blur-[140px]"></div>
+               <div className=" absolute top-1/3 -right-32 w-[32rem] h-[32rem] rounded-full bg-[#ffaa40] opacity-25 blur-[120px]"></div>
+               <div className="absolute -bottom-24 left-1/4 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] opacity-20 blur-[160px]"></div>
+            </div>
+     
       
       {/* Content container */}
       <div className='relative z-10 w-full max-w-6xl px-4 py-12 mx-auto sm:px-6 md:px-8 lg:py-24'>
         <div className='flex flex-col items-center gap-10 md:gap-12 lg:flex-row'>
           {/* Text content */}
           <div className='flex flex-col space-y-6 lg:w-1/2'>
-            <h1 className='text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl'>
+            <h1 className='text-3xl font-bold leading-tight text-gray-900 md:text-[26px] big_heading'>
               <BlurText
                 text="About Me"
                 delay={150}

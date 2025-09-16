@@ -7,10 +7,10 @@ export default function TiltedCard({
   altText = 'Tilted card image', // Alt text for accessibility
   
   // Layout props
-  containerHeight = '300px',   // Height of the outer container
+  containerHeight = '500px',   // Height of the outer container
   containerWidth = '100%',     // Width of the outer container
-  imageHeight = '300px',       // Height of the actual card/image
-  imageWidth = '300px',        // Width of the actual card/image
+  imageHeight = '500px',       // Height of the actual card/image
+  imageWidth = '500px',        // Width of the actual card/image
   
   // Animation props
   scaleOnHover = 1.02,         // How much to scale the card on hover (1.02 = 2% bigger)

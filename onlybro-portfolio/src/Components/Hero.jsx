@@ -19,14 +19,14 @@ import { FaFileDownload } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <div className='relative z-10 flex flex-col bg-[#e0e0d3] h-screen overflow-hidden px-6 lg:px-24 items-center justify-center '>
+    <div className='relative z-10 flex flex-col bg-[#e0e0d3] min-h-screen overflow-hidden px-6 lg:px-24 items-center justify-center '>
     {/* Background blur circles */}
-            <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
-               <div className="absolute -top-40 -left-40 w-[40rem] h-[40rem] rounded-full bg-[#9c40ff] opacity-30 blur-[140px]"></div>
-               <div className="absolute top-1/3 -right-32 w-[32rem] h-[32rem] rounded-full bg-[#ffaa40] opacity-25 blur-[120px]"></div>
+         <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
+               <div className="hidden absolute -top-40 -left-40 w-[40rem] h-[40rem] rounded-full bg-[#9c40ff] opacity-30 blur-[140px]"></div>
+               <div className=" absolute top-1/3 -right-32 w-[32rem] h-[32rem] rounded-full bg-[#ffaa40] opacity-25 blur-[120px]"></div>
                <div className="absolute -bottom-24 left-1/4 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] opacity-20 blur-[160px]"></div>
             </div>
-            <img src={noise} alt="noise" className='absolute inset-0 -z-5 bg-blend-multiply'/>
+            <img src={noise} alt="noise" className='absolute inset-0 pointer-events-none -z-10' style={{ mixBlendMode: 'multiply' }} />
      
                {/* Decorative particles */}
             <div className="absolute inset-0 pointer-events-none -z-5">
@@ -35,6 +35,7 @@ const Hero = () => {
               <img src={ink} alt="arrow" className="absolute h-26 w-26 opacity-20 rotate-12 animate-pulse" style={{ top: '50%', left: '90%' }} />
               <img src={electric} alt="electric" className="absolute h-26 w-26 opacity-60 rotate-12 animate-pulse" style={{ top: '80%', left: '50%' }} />
             </div>
+            
      
     <div className="flex flex-col items-center justify-center w-full space-y-6 text-center">
             <h1 className="text-[72px] leading-[72px] font-bold text-center lg:text-[92px] lg:leading-[92px] font-geologica">
@@ -48,13 +49,13 @@ const Hero = () => {
                />
                </span>   
             </h1>
-            <p className="text-2xl font-bold text-center para ">
+            <p className="text-2xl font-bold text-center para">
              <TextType 
                text={[
                 "I am UI/UX Designer.",
                 "I am Frontend Developer." 
                     ]}
-               speed={90}
+               speed={100}
                pause={3000}
                loop={true}
                 className="text-gray-800"
@@ -70,7 +71,7 @@ const Hero = () => {
                  </a>
                </FadeContent>
                <FadeContent blur={false} duration={4000} easing="ease-out" initialOpacity={0} delay={800}>
-                 <a href="#cv" className=" inline-flex items-center justify-center px-6 py-3 font-bold text-black transition-all duration-300 bg-transparent border-2 rounded border-[#b98815] hover:text-white gap-2 box-border btn-fill-sweep">
+                 <a href="#cv" className=" inline-flex items-center justify-center px-6 py-3 font-bold text-black transition-all duration-300 bg-transparent border-2 rounded border-[#b98815] hover:text-white gap-2 box-border hover:border-none btn-fill-sweep">
                    <FaFileDownload size={15} />
                    <span className="relative z-10">Download CV</span>
                  </a>
