@@ -47,3 +47,28 @@ body {
     border-image-slice: 1;
     border-image-source: linear-gradient(90deg, #ffaa40, #9c40ff, #ffaa40);
 }
+
+.btn-fill-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-fill-sweep > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-fill-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #b98815, #d6a43a, #b98815);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 400ms ease;
+  z-index: 0;
+}
+
+.btn-fill-sweep:hover::before {
+  transform: scaleX(1);
+}

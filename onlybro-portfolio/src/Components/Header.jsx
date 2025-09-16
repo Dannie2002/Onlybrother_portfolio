@@ -7,7 +7,7 @@ const Header = () => {
     <div className="fixed top-0 left-0 z-50 w-full backdrop-blur-md border-white/20">
       <div className='flex items-center px-4 py-2 lg:justify-between lg:px-16'>
         <a>
-          <h1 className="py-4 text-3xl font-bold text-gray-800">
+          <h1 className="py-4 font-bold text-gray-800 text-[18px] big_heading" >
             Only Brother
           </h1>
         </a>
@@ -32,7 +32,7 @@ const Header = () => {
           </svg>
         </button>
 
-        <button className='hidden px-4 py-2 text-white transition duration-300 bg-[#b98815] rounded lg:block hover:bg-blue-700  big_heading'>
+        <button className='hidden px-4 py-2 text-white transition duration-300 bg-[#b98815] rounded lg:block hover:bg-[#9c40ff]  big_heading text-[14px]'>
           Let's Connect
         </button>
       </div>
