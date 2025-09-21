@@ -51,7 +51,7 @@ const About = () => {
               <FadeContent blur={false} duration={4000} easing="ease-out" initialOpacity={0} delay={800}>
                 <a 
                   href="#contact" 
-                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-transform duration-200 rounded-lg sm:px-8 sm:py-4 sm:text-base bg-[#b98815] hover:bg-[#a07712] shadow-lg hover:shadow-xl transform-gpu hover:scale-105"
+                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-transform duration-200 rounded-lg sm:px-8 sm:py-4 sm:text-base bg-[#b98815]  hover:bg-[#a07712] shadow-lg hover:shadow-xl transform-gpu hover:scale-105"
                   style={{ transformOrigin: 'center' }}
                 >
                   Let's Connect
@@ -61,7 +61,7 @@ const About = () => {
           </div>
 
           {/* TiltedCard section */}
-          <div className='flex justify-center w-full lg:w-1/2'>
+          <div className='flex justify-center w-full lg:w-1/2' data-aos="fade-left" data-aos-duration='2000' data-aos-delay='200'> 
             <TiltedCard 
               imageSrc={headImage}
               altText="Developer portrait"
@@ -86,7 +86,7 @@ const About = () => {
                   </h3>
                   
                   {/* Paragraph */}
-                  <p className="text-xs leading-relaxed text-gray-200 sm:text-sm">
+                  <p className="text-xs leading-relaxed text-gray-200 sm:text-sm" >
                     Passionate about creating amazing web experiences with modern technologies
                   </p>
                 </div>

@@ -38,7 +38,7 @@ const Hero = () => {
             
      
     <div className="flex flex-col items-center justify-center w-full space-y-6 text-center">
-            <h1 className="text-[72px] leading-[72px] font-bold text-center lg:text-[92px] lg:leading-[92px] font-geologica">
+            <h1 className="text-[22px] leading-[22px] font-bold text-center lg:text-[32px] lg:leading-[32px] font-geologica">
                Hello, I'm
                 <span> <ShinyText 
                 text=" Only Brother." 
@@ -49,11 +49,11 @@ const Hero = () => {
                />
                </span>   
             </h1>
-            <p className="text-2xl font-bold text-center para">
+            <h1 className="text-2xl font-bold text-center para lg:text-[92px] lg:leading-[92px]">
              <TextType 
                text={[
-                "I am UI/UX Designer.",
-                "I am Frontend Developer." 
+                "I am a Web Designer.",
+                "I am a Front-End Engineer." 
                     ]}
                speed={100}
                pause={3000}
@@ -63,7 +63,7 @@ const Hero = () => {
                cursorChar="|"
              />
                 
-              </p>
+              </h1>
               <div className='flex justify-center gap-4'>
                <FadeContent blur={false} duration={1400} easing="ease-out" initialOpacity={0} delay={200}>
                  <a href="#contact" className="inline-flex items-center justify-center px-6 py-3 font-bold text-white transition-all duration-400 rounded bg-[#b98815] hover:bg-[#b98815] hover:text-white box-border border-2 border-transparent">

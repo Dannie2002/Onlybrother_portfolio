@@ -14,7 +14,7 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav className='items-center justify-center hidden px-4 lg:gap-14 lg:flex lg:mx-auto lg:relative lg:py-0 big_heading'>
-            <a href="#home" className='text-[14px] font-semibold text-gray-700 hover:text-[#EF7722] transition-all'>Home</a>
+            <a href="#home" className='text-[14px] font-semibold text-gray-700 hover:text-[#b98815] transition-all'>Home</a>
             <a href="#about" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>About</a>
             <a href="#services" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>Services</a>
             <a href="#portfolio" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>Projects</a>
