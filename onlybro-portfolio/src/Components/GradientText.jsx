@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 const GradientText = ({
   children,
   className = '',
-  colors = ['#ffaa40', '#9c40ff', '#ffaa40'],
+  colors = ['#ffffff', '#b98815', '#F6B17A'],
   animationSpeed = 8,
   showBorder = false,
   disabled = false,

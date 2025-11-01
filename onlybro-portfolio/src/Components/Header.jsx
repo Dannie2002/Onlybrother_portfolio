@@ -4,35 +4,50 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 z-50 w-full backdrop-blur-md border-white/20">
-      <div className='flex items-center px-4 py-2 lg:justify-between lg:px-16'>
-        <a>
-          <h1 className="py-4 font-bold text-gray-800 text-[18px] big_heading" >
+    <div className="fixed top-0 left-0 z-50 w-full backdrop-blur-md">
+      <div className='flex items-center justify-between px-24 py-6 lg:px-16'>
+        <a href="#home" className="flex items-center">
+          <h1 className=" text-[#177A96] text-[14px] worky">
             Only Brother
           </h1>
         </a>
 
         {/* Desktop Nav */}
-        <nav className='items-center justify-center hidden px-4 lg:gap-14 lg:flex lg:mx-auto lg:relative lg:py-0 big_heading'>
-            <a href="#home" className='text-[14px] font-semibold text-gray-700 hover:text-[#b98815] transition-all'>Home</a>
-            <a href="#about" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>About</a>
-            <a href="#services" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>Services</a>
-            <a href="#portfolio" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>Projects</a>
-            <a href="#contact" className='text-[14px] font-semibold text-gray-700 hover:text-gray-900'>Contact</a>
+        <nav className='items-center justify-center hidden px-4 lg:gap-8 lg:flex lg:mx-auto lg:relative lg:py-0 worky'>
+            <a href="#home" className='text-[14px]  text-[] hover:text-[#b98815] transition-all duration-300 relative group'>
+              Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#about" className='text-[14px]  text-gray-700 hover:text-[#b98815] transition-all duration-300 relative group'>
+              About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#services" className='text-[14px]  text-gray-700 hover:text-[#b98815] transition-all duration-300 relative group'>
+              Services
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#portfolio" className='text-[14px]  text-gray-700 hover:text-[#b98815] transition-all duration-300 relative group'>
+              Projects
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#contact" className='text-[14px] text-gray-700 hover:text-[#b98815] transition-all duration-300 relative group'>
+              Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
+            </a>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Animated Hamburger Menu Button */}
         <button
-          className='z-50 ml-auto lg:hidden'
+          className='relative z-50 flex flex-col items-center justify-center w-8 h-8 ml-auto lg:hidden group'
           onClick={() => setNavOpen(!navOpen)}
-          aria-label="Open navigation"
+          aria-label="Toggle navigation"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out ${navOpen ? 'rotate-45 translate-y-1.5' : '-translate-y-1'}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out ${navOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-1.5' : 'translate-y-1'}`}></span>
         </button>
 
-        <button className='hidden px-4 py-2 text-white transition duration-300 bg-[#b98815] rounded lg:block hover:bg-[#9c40ff]  big_heading text-[14px]'>
+        <button className='hidden px-6 py-2.5 text-white transition-all duration-300 bg-[#5176A3] rounded-lg lg:block  hover:shadow-lg worky text-[14px]'>
           Let's Connect
         </button>
       </div>
@@ -42,39 +57,28 @@ const Header = () => {
         <>
           {/* Backdrop */}
           <div 
-            className='fixed inset-0 z-40 bg-black bg-opacity-50'
+            className='fixed inset-0 z-40 duration-300 bg-black bg-opacity-50 backdrop-blur-sm animate-in fade-in'
             onClick={() => setNavOpen(false)}
           />
           
           {/* Mobile Navigation */}
-          <nav className='fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center gap-6 shadow-2xl bg-gradient-to-br from-white/98 to-gray-50/95 backdrop-blur-xl lg:hidden'>
-            {/* Close Button */}
-            <button
-              className='absolute p-3 transition-all duration-300 rounded-full top-6 right-6 hover:bg-gray-100'
-              onClick={() => setNavOpen(false)}
-              aria-label="Close navigation"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            
+          <nav className='fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center gap-8 duration-300 shadow-2xl bg-gradient-to-br from-white/98 to-gray-50/95 backdrop-blur-xl lg:hidden animate-in slide-in-from-right'>
             {/* Logo in Mobile Nav */}
             <div className='absolute top-6 left-6'>
               <h2 className="text-xl font-bold text-gray-800">Only Brother</h2>
             </div>
             
             {/* Navigation Links */}
-            <div className='flex flex-col items-center gap-6 mt-16'>
-              <a href="#home" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105' onClick={() => setNavOpen(false)}>Home</a>
-              <a href="#about" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105' onClick={() => setNavOpen(false)}>About</a>
-              <a href="#services" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105' onClick={() => setNavOpen(false)}>Services</a>
-              <a href="#portfolio" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105' onClick={() => setNavOpen(false)}>Projects</a>
-              <a href="#contact" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105' onClick={() => setNavOpen(false)}>Contact</a>
+            <div className='flex flex-col items-center gap-8 mt-16'>
+              <a href="#home" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105 transform hover:-translate-y-1' onClick={() => setNavOpen(false)}>Home</a>
+              <a href="#about" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105 transform hover:-translate-y-1' onClick={() => setNavOpen(false)}>About</a>
+              <a href="#services" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105 transform hover:-translate-y-1' onClick={() => setNavOpen(false)}>Services</a>
+              <a href="#portfolio" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105 transform hover:-translate-y-1' onClick={() => setNavOpen(false)}>Projects</a>
+              <a href="#contact" className='text-2xl font-semibold text-gray-800 hover:text-[#b98815] transition-all duration-300 hover:scale-105 transform hover:-translate-y-1' onClick={() => setNavOpen(false)}>Contact</a>
             </div>
             
             {/* Hire Me Button for Mobile */}
-            <button className='px-8 py-4 text-white font-bold bg-gradient-to-r from-[#b98815] to-[#d4a017] rounded-xl hover:from-[#a07712] hover:to-[#b88814] transition-all duration-300 mt-8 shadow-lg hover:shadow-xl hover:scale-105'>
+            <button className='px-8 py-4 text-white font-bold bg-gradient-to-r from-[#b98815] to-[#d4a017] rounded-xl hover:from-[#a07712] hover:to-[#b88814] transition-all duration-300 mt-8 shadow-lg hover:shadow-xl hover:scale-105 transform hover:-translate-y-1'>
               Hire Me
             </button>
           </nav>

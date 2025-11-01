@@ -2,20 +2,34 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'guffber-regular';
-  src: url('./assets/Fonts/guffber-regular.otf') format('opentype');
+  font-family: 'worky';
+  src: url('./assets/Fonts/worky.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'golant';
+  src: url('./assets/Fonts/golant.otf');
+}
+@font-face {
+  font-family: 'haunt';
+  src: url('./assets/Fonts/haunt.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-  font-family: 'akira';
-  src: url('./assets/Fonts/akira.otf');
 }
+@font-face {
+  font-family: 'geonova';
+  src: url();
+}
+
 
 
 :root{
     --font-geologica: 'Geologica', sans-serif;
     --font-outfit: 'Outfit', sans-serif;
     --font-avenue: 'guffber-regular', sans-serif;
-    --font-akira:'akira';
+    --font-worky:'worky';
+    --font-golant:'golant';
+    --font-haunt:'haunt';
 }
 
 body {
@@ -28,10 +42,19 @@ body {
 .para{
   font-family: var(--font-guffber-regular);
 }
-.big_heading{
-  font-family: var(--font-akira);
+.worky{
+  font-family: var(--font-worky);
 }
 
+.golant{
+  font-family: var(--font-golant);
+}
+.geonova{
+  font-family: var(--font-geonova);
+}
+.haunt{
+  font-family: var(--font-haunt);
+}
 @keyframes shine {
   0% {
     background-position: -100% 0;
@@ -71,4 +94,36 @@ body {
 
 .btn-fill-sweep:hover::before {
   transform: scaleX(1);
+}
+
+.bg-linear-gradient {
+  /* The linear gradient using your colors and stops */
+  background-image: linear-gradient(to right, #177A96 8%, #F0523D 88%);
+}
+
+.bg-clip {
+  /* Key step 1: Clip the background to the shape of the text */
+  -webkit-background-clip: text; /* Required for cross-browser compatibility */
+  background-clip: text;
+
+  /* Key step 2: Make the text itself transparent so the clipped background shows through */
+  color: transparent; 
+  /* Fallback for older browsers */
+  -webkit-text-fill-color: transparent; 
+}
+
+/* Optional: Add some styling to make the text visible and clear */
+.image-container {
+  position: relative;
+}
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%; /* Adjust for blend width */
+  height: 100%;
+  pointer-events: none;
+  border-radius: 1.5rem; /* Match your image's rounded-3xl */
+  background: linear-gradient(to right, transparent, #F2EBDF);
 }
