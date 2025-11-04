@@ -13,6 +13,7 @@ import SocialMediaIcon from './SocialMediaIcon';
 import { FaFileDownload } from 'react-icons/fa';
 import {motion} from 'framer-motion';
 import { FlipWords } from './FlipWords';
+import { Highlighter } from './Highlighter';
 
 
 
@@ -34,48 +35,49 @@ const Hero = () => {
                {/* Decorative particles */}
             <div className="absolute inset-0 pointer-events-none -z-5">
                {/* Arrow particles */}
-              <img src={arrow} alt="arrow" className="absolute h-auto w-22 opacity-20 rotate-12 animate-pulse" style={{ top: '46%', left: '30%', rotate: '12deg'}} />
+              <img src={arrow} alt="arrow" className="absolute h-auto w-22 opacity-20 rotate-12 animate-pulse" style={{ top: '43%', left: '30%', rotate: '12deg'}} />
               <img src={ink} alt="arrow" className="absolute h-26 w-26 opacity-20 rotate-12 animate-pulse" style={{ top: '50%', left: '90%' }} />
               <img src={electric} alt="electric" className="absolute h-26 w-26 opacity-60 rotate-12 animate-pulse" style={{ top: '80%', left: '50%' }} />
             </div>
 
-     <div className="relative z-20 flex flex-col items-center w-full gap-12 py-12 lg:mt-6 lg:flex-row lg:items-start lg:justify-between max-w-7xl lg:py-0 lg:gap-14">
+     <div className="relative z-20 flex flex-col items-center w-full gap-12 py-12 lg:mt-6 lg:flex-row lg:items-start lg:justify-between max-w-7xl lg:py-0 lg:gap-6">
     <div className="flex flex-col items-start justify-center w-1/2 space-y-6 lg:mt-12">
-            <motion.h1 className="text-[22px] leading-[22px] font-bold lg:text-left lg:text-[14px] lg:leading-[14px] worky"
+            <motion.h1 className="text-[22px] leading-[22px] font-bold lg:text-left lg:text-[14px] lg:leading-[14px] altere"
              initial={{ opacity: 0, x: -230 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ delay: 1, ease: "easeOut" }}
             >
-               Hi, I'm
-                <span> Dani.
-               </span>   
+               Hi, I'm     <Highlighter color='#F0523D' action='underline'>Dani.</Highlighter>
             </motion.h1>
-            
-              <motion.div className="flex flex-row items-center">
-                <span className="text-[18px] lg:text-[26px] geologica font-semibold text-left uppercase text-[#F0523D] mb-2">
+
+              <motion.div className="flex flex-row items-center"
+              initial={{opacity:0,x:-220}}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{duration:0.2, delay: 1.5, ease: "easeOut" }}>
+                <span className="text-[18px] lg:text-[26px] altere font-semibold text-left uppercase text-[#F0523D] mb-2">
                   a&nbsp;
                  </span>
                <FlipWords
                    words={['Full-Stack Developer', 'UI/UX Designer']}
                    interval={3000}
-                    className="text-[18px] lg:text-[26px] geologica font-semibold text-left uppercase text-[#1d1b1b] mb-2"
+                    className="text-[18px] lg:text-[18px] altere font-semibold text-left uppercase text-[#1d1b1b] mb-2"
                 />
               </motion.div>
             
-            <motion.h1 className="text-2xl font-bold text-start golant lg:text-[46px] lg:leading-[46px] tracking-wider text-transparent"
+            <motion.h1 className="text-2xl font-bold text-start golant lg:text-[46px] lg:leading-[46px] tracking-wider text-transparent lg:max-w-[550px]"
               initial={{ opacity: 0, x: -230 }}
              animate={{ opacity: 1, x: 0 }}
-             transition={{ delay: 1.3, ease: "easeOut" }}
+             transition={{duration: 2, delay: 1.8, ease: "easeOut" }}
             >
               <ShinyText
                 text="I build digital experiences that drive market results."
-                speed={8}
+                speed={9}
                 disabled={false}
                 color="#177A96"
                 shineColor="rgba(240, 82, 62, 0.9)"
               />
               </motion.h1>
-
+               <SocialMediaIcon />
               <div className='flex justify-center gap-4'>
                <FadeContent blur={false} duration={1400} easing="ease-out" initialOpacity={0} delay={200}>
                  <a href="#contact" className=" text-[14px] worky inline-flex items-center justify-center px-6 py-2 text-white transition-all duration-400 rounded bg-[#5176A3] hover:bg-[#5176A3/60] hover:text-white box-border border-2 border-transparent">
@@ -90,7 +92,7 @@ const Hero = () => {
                </FadeContent>
 
               </div>
-             {/* <SocialMediaIcon />*/}
+             
                {/* <Stats /> */}
     </div>
     

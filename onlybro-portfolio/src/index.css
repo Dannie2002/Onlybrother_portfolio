@@ -11,8 +11,8 @@
   src: url('./assets/Fonts/golant.otf');
 }
 @font-face {
-  font-family: 'haunt';
-  src: url('./assets/Fonts/haunt.otf') format('opentype');
+  font-family: 'altere';
+  src: url('./assets/Fonts/altere.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,7 +29,7 @@
     --font-avenue: 'guffber-regular', sans-serif;
     --font-worky:'worky';
     --font-golant:'golant';
-    --font-haunt:'haunt';
+    --font-altere:'altere';
 }
 
 body {
@@ -52,8 +52,8 @@ body {
 .geonova{
   font-family: var(--font-geonova);
 }
-.haunt{
-  font-family: var(--font-haunt);
+.altere{
+  font-family: var(--font-altere);
 }
 @keyframes shine {
   0% {
@@ -85,7 +85,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #b98815, #d6a43a, #b98815);
+  background: linear-gradient(90deg, #5176A3, #5176A3);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 400ms ease;
@@ -126,4 +126,18 @@ body {
   pointer-events: none;
   border-radius: 1.5rem; /* Match your image's rounded-3xl */
   background: linear-gradient(to right, transparent, #F2EBDF);
+}
+
+@keyframes aurora-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-aurora {
+  animation: aurora-gradient 4s linear infinite;
+  background-size: 200% 200%;
 }

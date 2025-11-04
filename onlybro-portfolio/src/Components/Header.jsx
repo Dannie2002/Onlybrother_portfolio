@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
     <div className="fixed top-0 left-0 z-50 w-full backdrop-blur-md">
-      <div className='flex items-center justify-between px-24 py-6 lg:px-16'>
+      <div className='flex items-center justify-between px-24 py-6 lg:px-26'>
         <a href="#home" className="flex items-center">
           <h1 className=" text-[#177A96] text-[14px] worky">
             Only Brother
@@ -14,7 +15,7 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav className='items-center justify-center hidden px-4 lg:gap-8 lg:flex lg:mx-auto lg:relative lg:py-0 worky'>
-            <a href="#home" className='text-[14px]  text-[] hover:text-[#b98815] transition-all duration-300 relative group'>
+            <a href="#home" className='text-[14px] hover:text-[#b98815] transition-all duration-300 relative group'>
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
             </a>
@@ -47,9 +48,13 @@ const Header = () => {
           <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-1.5' : 'translate-y-1'}`}></span>
         </button>
 
-        <button className='hidden px-6 py-2.5 text-white transition-all duration-300 bg-[#5176A3] rounded-lg lg:block  hover:shadow-lg worky text-[14px]'>
+        <motion.button className='hidden px-6 py-2.5 text-white transition-all duration-300 bg-[#5176A3] rounded-lg lg:block  worky text-[14px]'
+        whileHover={{boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.3)" }}
+        whileTap={{ scale: 0.25 }}
+        
+        >
           Let's Connect
-        </button>
+        </motion.button>
       </div>
 
       {/* Mobile Nav Overlay */}
