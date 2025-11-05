@@ -13,10 +13,9 @@ const Stats = () => {
         <div className='relative flex flex-col items-center justify-center space-y-2 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.12)] p-8 min-w-[180px] hover:bg-white/15 transition-colors'>
           <FadeContent blur={false} duration={8000} easing="ease-out" initialOpacity={0} delay={800} className='flex flex-col items-start justify-center'>
               <h1 className='text-4xl font-bold text-left text-green-800 preon'>23+</h1>
-            
-            <GradientText>
+
               <h4 className='text-[16px] haunt'>Websites</h4>
-            </GradientText>
+
           </FadeContent>
         </div>
       </div>

@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 left-0 z-50 w-full backdrop-blur-md">
-      <div className='flex items-center justify-between px-24 py-6 lg:px-26'>
+      <div className='flex items-center justify-between px-24 py-6 lg:px-36'>
         <a href="#home" className="flex items-center">
           <h1 className=" text-[#177A96] text-[14px] worky">
             Only Brother

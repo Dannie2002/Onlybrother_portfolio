@@ -13,16 +13,11 @@ import SocialMediaIcon from './SocialMediaIcon';
 import { FaFileDownload } from 'react-icons/fa';
 import {motion} from 'framer-motion';
 import { FlipWords } from './FlipWords';
-import { Highlighter } from './Highlighter';
-
-
-
-
 
 
 const Hero = () => {
   return (
-    <section className='relative z-10 flex flex-col bg-[#F2EBDF] min-h-screen overflow-hidden px-6 lg:px-26 items-center justify-center'>
+    <section className='relative z-10 flex flex-col bg-[#F2EBDF] min-h-screen overflow-hidden px-6 lg:px-36 items-center justify-center'>
     {/* Background blur circles */}
          <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
               {/*<div className="hidden absolute -top-40 -left-40 w-[40rem] h-[40rem] rounded-full bg-[#9c40ff] opacity-30 blur-[140px]"></div>*/}
@@ -35,7 +30,7 @@ const Hero = () => {
                {/* Decorative particles */}
             <div className="absolute inset-0 pointer-events-none -z-5">
                {/* Arrow particles */}
-              <img src={arrow} alt="arrow" className="absolute h-auto w-22 opacity-20 rotate-12 animate-pulse" style={{ top: '43%', left: '30%', rotate: '12deg'}} />
+              <img src={arrow} alt="arrow" className="absolute h-auto w-22 opacity-20 rotate-12 animate-pulse" style={{ top: '42%', left: '31%', rotate: '12deg'}} />
               <img src={ink} alt="arrow" className="absolute h-26 w-26 opacity-20 rotate-12 animate-pulse" style={{ top: '50%', left: '90%' }} />
               <img src={electric} alt="electric" className="absolute h-26 w-26 opacity-60 rotate-12 animate-pulse" style={{ top: '80%', left: '50%' }} />
             </div>
@@ -47,27 +42,27 @@ const Hero = () => {
              animate={{ opacity: 1, x: 0 }}
              transition={{ delay: 1, ease: "easeOut" }}
             >
-               Hi, I'm     <Highlighter color='#F0523D' action='underline'>Dani.</Highlighter>
+               Hi, I'm Dani.
             </motion.h1>
 
               <motion.div className="flex flex-row items-center"
               initial={{opacity:0,x:-220}}
               animate={{ opacity: 1, x: 0 }}
               transition={{duration:0.2, delay: 1.5, ease: "easeOut" }}>
-                <span className="text-[18px] lg:text-[26px] altere font-semibold text-left uppercase text-[#F0523D] mb-2">
+                <span className="text-[18px] lg:text-[20px] altere font-semibold text-left uppercase text-[#F0523D] mb-2">
                   a&nbsp;
                  </span>
                <FlipWords
                    words={['Full-Stack Developer', 'UI/UX Designer']}
                    interval={3000}
-                    className="text-[18px] lg:text-[18px] altere font-semibold text-left uppercase text-[#1d1b1b] mb-2"
+                    className="text-[18px] lg:text-[20px] altere font-semibold text-left uppercase text-[#1d1b1b] mb-2"
                 />
               </motion.div>
             
             <motion.h1 className="text-2xl font-bold text-start golant lg:text-[46px] lg:leading-[46px] tracking-wider text-transparent lg:max-w-[550px]"
               initial={{ opacity: 0, x: -230 }}
              animate={{ opacity: 1, x: 0 }}
-             transition={{duration: 2, delay: 1.8, ease: "easeOut" }}
+             transition={{duration: 0.7, delay: 1.8, ease: "easeOut" }}
             >
               <ShinyText
                 text="I build digital experiences that drive market results."

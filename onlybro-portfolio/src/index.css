@@ -141,3 +141,12 @@ body {
   animation: aurora-gradient 4s linear infinite;
   background-size: 200% 200%;
 }
+
+@keyframes moveGradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
