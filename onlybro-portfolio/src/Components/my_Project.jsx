@@ -2,6 +2,9 @@ import React from 'react'
 import FadeContent from './FadeContent'
 import GradientText from './GradientText'
 import { Highlighter } from './Highlighter'
+import { motion, AnimatePresence } from 'framer-motion'
+import portfolio from '../assets/Images/Portfolio.jpg'
+import web from '../assets/Images/Web-redesign.jpg'
 
 const projects = [
   {
@@ -9,7 +12,7 @@ const projects = [
     description: 'A minimal, responsive portfolio with custom animations and glassmorphism.',
     tech: ['React', 'Tailwind', 'Framer Motion'],
     link: '#',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop'
+    image: portfolio
   },
   {
     title: 'Data Visualization and Reporting',
@@ -18,69 +21,135 @@ const projects = [
     link: '#',
     image: 'https://images.unsplash.com/photo-1548095115-45697e336585?q=80&w=1600&auto=format&fit=crop'
   },
+
   {
-    title: 'Dashboard System',
+    title: 'Website Redesign',
     description: 'Analytics dashboard with cards, charts, and dark/light themes.',
     tech: ['React', 'Recharts', 'Tailwind'],
     link: '#',
-    image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop'
-  },
+    image: web
+  }
+  
+
   
 ]
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, isActive, anyActive, onHoverStart, onHoverEnd }) => {
   return (
-    <div className='group relative rounded-2xl overflow-hidden border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.12)]'>
-      <div className='absolute inset-0 p-[1px] rounded-2xl pointer-events-none'>
-        <div className='w-full h-full rounded-2xl bg-gradient-to-tr from-[#177A96]/30 via-white/10 to-[#5176A3]/30 opacity-90'></div>
-      </div>
-      <div className='relative flex flex-col h-full'>
-        <div className='w-full overflow-hidden h-44'>
-          <img src={project.image} alt={project.title} className='object-cover w-full h-full transition-transform duration-500 group-hover:scale-105' />
-        </div>
-        <div className='flex flex-col gap-2 p-5'>
+    <div
+      className='group relative rounded-[4px] overflow-hidden bg-[#f3f2f0] shadow-[0_8px_30px_rgba(0,0,0,0.12)]'
+      onMouseEnter={() => onHoverStart && onHoverStart(project.title)}
+      onMouseLeave={() => onHoverEnd && onHoverEnd()}
+      style={{ flex: isActive ? 2 : anyActive ? 0.8 : 1, minWidth: '90px', transition: 'flex 350ms ease' }}
+    >
+      <div className='absolute inset-0 transition-all duration-500 z-10 pointer-events-none bg-gradient-to-t from-black/40 to-black/10 opacity-90 group-hover:opacity-100'></div>
 
-            <h3 className='text-xl font-bold haunt text-[#177A96]'>{project.title}</h3>
+      <div className='w-full overflow-hidden h-[160px] lg:h-[460px] relative'>
+        <img
+          src={project.image}
+          alt={project.title}
+          className='object-cover w-full h-full transition-all ease-in-out duration-700 group-hover:grayscale-0 group-hover:scale-105'
+        />
 
-          <p className='text-sm text-gray-800 geonova'>{project.description}</p>
-          <div className='flex flex-wrap gap-2 mt-2'>
-            {project.tech.map((t) => (
-              <span key={t} className='px-2 py-1 text-xs tracking-wide text-gray-800 uppercase border rounded akira bg-black/5 border-black/10'>
-                {t}
-              </span>
-            ))}
-          </div>
-          <div className='mt-3'>
-            <a href={project.link} className='akira uppercase inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-[#5176A3] transition-all duration-300 bg-transparent border-1 rounded border-[#ffffff] hover:text-white gap-2 box-border hover:border-none btn-fill-sweep'>
-              View Project
-            </a>
-          </div>
-        </div>
+        <AnimatePresence>
+          {isActive && (
+            <motion.div
+              key='hover-content'
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 8 }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
+              className='absolute inset-0 z-30 p-6 flex flex-col'
+              style={{ background: '#125d95' }}
+            >
+              <h3 className='text-2xl chivo uppercase text-[#fffced] mb-2'>{project.title}</h3>
+              <p className='text-[14px] zalando leading-relaxed text-[#fffced] mb-4'>{project.description}</p>
+
+              <div className='mt-auto flex flex-wrap gap-2'>
+                {project.tech.map((t) => (
+                  <span key={t} className='px-2 py-1 text-xs tracking-wide text-white uppercase border rounded akira bg-white/10 border-white/20'>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <motion.div
+          className='absolute bottom-4 left-4 right-4 z-20 flex flex-col'
+          animate={{ y: isActive ? -80 : 0 }}
+          transition={{ duration: 0.95, ease: 'easeOut' }}
+        >
+          <h3 className='text-2xl chivo uppercase font-semibold text-[#fffced] drop-shadow-md'>{project.title}</h3>
+        </motion.div>
       </div>
     </div>
   )
 }
 
 const MyProject = () => {
+  const [hovered, setHovered] = React.useState(null)
+  const listRef = React.useRef(null)
+
+  const scrollAmount = () => (listRef.current ? Math.round(listRef.current.clientWidth * 0.8) : 300)
+
+  const handleNext = () => {
+    if (!listRef.current) return
+    listRef.current.scrollBy({ left: scrollAmount(), behavior: 'smooth' })
+  }
+
+  const handlePrev = () => {
+    if (!listRef.current) return
+    listRef.current.scrollBy({ left: -scrollAmount(), behavior: 'smooth' })
+  }
   return (
-    <section id='projects' className='relative z-10 min-h-screen px-6 py-12 lg:px-24 bg-[#F2EBDF]'>
-      <div className='flex flex-col items-center justify-center mb-8'>
-        <FadeContent blur={false} duration={1400} easing='ease-out' initialOpacity={0} delay={200}>
-          <h1 className='text-3xl font-bold tracking-wide text-center lg:text-[36px] altere text-[#177A96]'>
-           All Projects
+    <section id='projects' className='relative z-10 min-h-screen px-6 py-12 lg:px-24 bg-[#ffffff]'>
+      <div className='flex flex-col items-start justify-center mb-8'>  
+          <h1 className='text-3xl zalando font-bold  text-center lg:text-[20px] uppercase text-[#125D98]'>
+           My projects
           </h1>
-        </FadeContent>
-        <p className='geonova text-[18px] text-gray-800 lg:max-w-[800px] mt-2'>
+          <div className='w-10 h-1 mt-3 bg-[#6c7606]'></div>
+       <h4 className='chivo font-semibold lg:leading-[48px] lg:text-[42px] text-[#4a4a4a] lg:max-w-6xl mt-8'>
           A curated selection of work highlighting design clarity, performance, and clean code.
-        </p>
+        </h4>
       </div>
 
-      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+      <div ref={listRef} className='flex flex-col gap-4 lg:mt-22 lg:gap-8 lg:flex-row pb-4'>
         {projects.map((p) => (
-          <FadeContent key={p.title} blur={false} duration={1200} easing='ease-out' initialOpacity={0} delay={200}>
-            <ProjectCard project={p} />
-          </FadeContent>
+          <ProjectCard
+            key={p.title}
+            project={p}
+            isActive={hovered === p.title}
+            anyActive={Boolean(hovered)}
+            onHoverStart={(t) => setHovered(t)}
+            onHoverEnd={() => setHovered(null)}
+          />
         ))}
+      </div>
+
+      <div className='mt-4 flex items-center justify-end gap-2'>
+        <button
+          onClick={handlePrev}
+          aria-label='Previous projects'
+           className='inline-flex items-center gap-2 p-2 bg-[#125D98] text-white rounded-full shadow hover:bg-[#0f4f85]'
+        >
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='w-4 h-4'>
+            <path d='M15 18l-6-6 6-6' strokeLinecap='round' strokeLinejoin='round' />
+          </svg>
+          
+        </button>
+
+        <button
+          onClick={handleNext}
+          aria-label='Next projects'
+          className='inline-flex items-center gap-2 p-2 bg-[#125D98] text-white rounded-full shadow hover:bg-[#0f4f85]'
+        >
+          
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='w-4 h-4'>
+            <path d='M9 6l6 6-6 6' strokeLinecap='round' strokeLinejoin='round' />
+          </svg>
+        </button>
       </div>
     </section>
   )

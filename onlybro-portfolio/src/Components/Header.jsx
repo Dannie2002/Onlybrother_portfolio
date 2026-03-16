@@ -5,33 +5,33 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 z-50 w-full backdrop-blur-md">
-      <div className='flex items-center justify-between px-24 py-6 lg:px-36'>
+    <div className="fixed top-0 left-0 z-50 w-full ">
+      <div className='flex items-center justify-between px-24 py-4 lg:px-36'>
         <a href="#home" className="flex items-center">
-          <h1 className=" text-[#177A96] text-[14px] worky">
+          <h1 className=" text-[#125d95] text-[16px] zalando uppercase font-bold ">
             Only Brother
           </h1>
         </a>
 
         {/* Desktop Nav */}
-        <nav className='items-center justify-center hidden px-4 lg:gap-8 lg:flex lg:mx-auto lg:relative lg:py-0 worky'>
+        <nav className='items-center justify-center text-[#fffced] hidden px-4 lg:gap-8 lg:flex lg:mx-auto lg:relative lg:py-0 zalando'>
             <a href="#home" className='text-[14px] hover:text-[#b98815] transition-all duration-300 relative group'>
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#about" className='text-[14px]  text-gray-700 hover:text-[#b98815] transition-all duration-300 relative group'>
+            <a href="#about" className='text-[14px]  text-[#fffced] hover:text-[#b98815] transition-all duration-300 relative group'>
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#services" className='text-[14px]  text-gray-700 hover:text-[#b98815] transition-all duration-300 relative group'>
-              Services
+            <a href="#services" className='text-[14px] text-[#fffced] hover:text-[#b98815] transition-all duration-300 relative group'>
+              Core Expertise
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#portfolio" className='text-[14px]  text-gray-700 hover:text-[#b98815] transition-all duration-300 relative group'>
+            <a href="#portfolio" className='text-[14px]  text-[#fffced] hover:text-[#b98815] transition-all duration-300 relative group'>
               Projects
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#contact" className='text-[14px] text-gray-700 hover:text-[#b98815] transition-all duration-300 relative group'>
+            <a href="#contact" className='text-[14px] text-[#fffced] hover:text-[#b98815] transition-all duration-300 relative group'>
               Contact
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
             </a>
@@ -48,7 +48,7 @@ const Header = () => {
           <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-1.5' : 'translate-y-1'}`}></span>
         </button>
 
-        <motion.button className='hidden px-6 py-2.5 text-white transition-all duration-300 bg-[#5176A3] rounded-lg lg:block  worky text-[14px]'
+        <motion.button className='hidden px-6 py-2.5 text-[#fffced] zalando transition-all duration-300 bg-[#125D98] rounded-[4px] lg:block  text-[14px]'
         whileHover={{boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.3)" }}
         whileTap={{ scale: 0.25 }}
         

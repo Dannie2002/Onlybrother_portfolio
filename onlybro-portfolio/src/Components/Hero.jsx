@@ -1,100 +1,103 @@
 import React from 'react'
-import heroImage from '../assets/head2.png' // Ensure you have an image at this path or use a placeholder URL
+import heroImage from '../assets/Images/head3.jpg' // Ensure you have an image at this path or use a placeholder URL
 import TextType from './TextType'
 import ShinyText from './ShinyText';
 import GradientText from './GradientText'
 import FadeContent from './FadeContent'
 import Stats from './Stats'
-import noise from '../assets/noise.png'
 import arrow from '../assets/arrow2.png'
+import noise from "../assets/Noise.png"
 import ink from '../assets/ink.png'
 import electric from'../assets/electric.png'
 import SocialMediaIcon from './SocialMediaIcon';
 import { FaFileDownload } from 'react-icons/fa';
 import {motion} from 'framer-motion';
 import { FlipWords } from './FlipWords';
+import DottedArrow from './Icons/Dotted_Arrow';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import SplitText from "gsap/SplitText";
+gsap.registerPlugin(useGSAP, SplitText);
 
 
 const Hero = () => {
+
+useGSAP(() => {
+  const heroSplit = new SplitText(".head", { type: "lines, words, chars" });
+  gsap.from(heroSplit.chars, {
+    opacity: 0,
+    y: 50,
+    ease: "power4.out",
+    duration: 1,
+    stagger: 0.05,
+    delay: 0.5
+  });
+}, []);
+
   return (
-    <section className='relative z-10 flex flex-col bg-[#F2EBDF] min-h-screen overflow-hidden px-6 lg:px-36 items-center justify-center'>
+    <section className='relative z-10 flex flex-col bg-[#F2EBDF] min-h-screen overflow-hidden px-6 lg:px-36 items-center justify-center' style={{ background: `url(${heroImage}) center/cover fixed no-repeat` }}>
+      <img src={noise} alt="noise" className="absolute inset-0 w-full mix-blend-multiply opacity-40 h-full object-cover"/>
     {/* Background blur circles */}
          <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
-              {/*<div className="hidden absolute -top-40 -left-40 w-[40rem] h-[40rem] rounded-full bg-[#9c40ff] opacity-30 blur-[140px]"></div>*/}
-              {/* <div className=" absolute top-1/3 -right-32 w-[32rem] h-[32rem] rounded-full bg-[#ffaa40] opacity-25 blur-[120px]"></div>*/}
-              {/*<div className="absolute -bottom-24 left-1/4 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] opacity-20 blur-[160px]"></div>*/}
+              <div className="absolute size-full opacity-60  bg-[#323232] "></div>
+               <div className="hidden absolute top-40 left-32 w-[32rem] h-[32rem] rounded-full bg-[#125d95] opacity-95 blur-[120px]"></div>
+              <div className="absolute hidden bottom-44 left-90 w-[48rem] h-[18rem] rounded-full bg-[#000000] opacity-20 "></div>
             </div>
             
-            <img src={noise} alt="noise" className='absolute inset-0 pointer-events-none -z-10' style={{ mixBlendMode: 'multiply' }} />
+           
      
                {/* Decorative particles */}
-            <div className="absolute inset-0 pointer-events-none -z-5">
+            <div className="relative  pointer-events-none z-30">
                {/* Arrow particles */}
-              <img src={arrow} alt="arrow" className="absolute h-auto w-22 opacity-20 rotate-12 animate-pulse" style={{ top: '42%', left: '31%', rotate: '12deg'}} />
-              <img src={ink} alt="arrow" className="absolute h-26 w-26 opacity-20 rotate-12 animate-pulse" style={{ top: '50%', left: '90%' }} />
-              <img src={electric} alt="electric" className="absolute h-26 w-26 opacity-60 rotate-12 animate-pulse" style={{ top: '80%', left: '50%' }} />
+               <DottedArrow color="#a3c300" size={70} className="absolute top-95 left-0"  />
+                
             </div>
 
-     <div className="relative z-20 flex flex-col items-center w-full gap-12 py-12 lg:mt-6 lg:flex-row lg:items-start lg:justify-between max-w-7xl lg:py-0 lg:gap-6">
-    <div className="flex flex-col items-start justify-center w-1/2 space-y-6 lg:mt-12">
-            <motion.h1 className="text-[22px] leading-[22px] font-bold lg:text-left lg:text-[14px] lg:leading-[14px] altere"
-             initial={{ opacity: 0, x: -230 }}
+    <div className="relative z-20 flex flex-col items-center w-full gap-12 py-12 lg:mt-6 lg:flex-row lg:items-start lg:justify-between max-w-7xl lg:py-0 lg:gap-6">
+       <div className="flex mt-12  flex-col z-50 items-center lg:items-start justify-center space-y-6 lg:mt-12">
+            <motion.h1 className="text-[16px] text-[#fffced] font-bold text-center leading-[22px]  lg:text-left lg:text-[14px] lg:leading-[14px] chivo"
+             initial={{ opacity: 0, x: -37 }}
              animate={{ opacity: 1, x: 0 }}
-             transition={{ delay: 1, ease: "easeOut" }}
+             transition={{ delay: 0.5, ease: "easeOut" }}
             >
                Hi, I'm Dani.
             </motion.h1>
 
               <motion.div className="flex flex-row items-center"
-              initial={{opacity:0,x:-220}}
+              initial={{opacity:0, x:-37}}
               animate={{ opacity: 1, x: 0 }}
-              transition={{duration:0.2, delay: 1.5, ease: "easeOut" }}>
-                <span className="text-[18px] lg:text-[20px] altere font-semibold text-left uppercase text-[#F0523D] mb-2">
+              transition={{duration:0.4, delay: 0.5, ease: "easeOut" }}>
+                <span className="text-[18px] lg:text-[20px] zalando font-semibold text-center lg:text-left uppercase text-[#a3c300] mb-2">
                   a&nbsp;
                  </span>
                <FlipWords
                    words={['Full-Stack Developer', 'UI/UX Designer']}
                    interval={3000}
-                    className="text-[18px] lg:text-[20px] altere font-semibold text-left uppercase text-[#1d1b1b] mb-2"
+                    className="text-[18px] lg:text-[20px] zalando font-bold text-center lg:text-left uppercase text-[#fffced] mb-2"
                 />
               </motion.div>
             
-            <motion.h1 className="text-2xl font-bold text-start golant lg:text-[46px] lg:leading-[46px] tracking-wider text-transparent lg:max-w-[550px]"
-              initial={{ opacity: 0, x: -230 }}
-             animate={{ opacity: 1, x: 0 }}
-             transition={{duration: 0.7, delay: 1.8, ease: "easeOut" }}
-            >
-              <ShinyText
-                text="I build digital experiences that drive market results."
-                speed={9}
-                disabled={false}
-                color="#177A96"
-                shineColor="rgba(240, 82, 62, 0.9)"
-              />
-              </motion.h1>
-               <SocialMediaIcon />
-              <div className='flex justify-center gap-4'>
-               <FadeContent blur={false} duration={1400} easing="ease-out" initialOpacity={0} delay={200}>
-                 <a href="#contact" className=" text-[14px] worky inline-flex items-center justify-center px-6 py-2 text-white transition-all duration-400 rounded bg-[#5176A3] hover:bg-[#5176A3/60] hover:text-white box-border border-2 border-transparent">
+                    <h1 className="head text-[78px] leading-[78px] text-center text-[#fffced] lg:text-start chivo font-extrabold uppercase mt-2  lg:text-[108px] lg:leading-[108px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
+                    <p className='chivo lg:text-left text-center text-[16px] w-[330px] text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
+             
+              <div className='flex lg:flex-row flex-col justify-center gap-6'>
+              
+                 <a href="#contact" className=" text-[16px]  inline-flex items-center justify-center px-6 py-2 text-[#fffced] zalando transition-all duration-400 rounded bg-[#125D98] hover:bg-[#5176A3/60] hover:text-white box-border border-2 border-transparent">
                    View Projects
                  </a>
-               </FadeContent>
-               <FadeContent blur={false} duration={4000} easing="ease-out" initialOpacity={0} delay={800}>
-                 <a href="#cv" className="text-[14px] worky inline-flex items-center justify-center px-6 py-2 text-[#177A96] transition-all duration-300 bg-transparent border-2 rounded border-[#177A96] hover:text-white gap-2 box-border hover:border-none btn-fill-sweep">
+            
+                 <a href="#cv" className="text-[16px] zalando inline-flex items-center justify-center px-6 py-2 text-[#fffced] transition-all duration-300 bg-transparent border rounded border-[#fffced] hover:text-white gap-2 box-border hover:border-none btn-fill-sweep">
                    <FaFileDownload size={15} />
                    <span className="relative z-10">Download CV</span>
                  </a>
-               </FadeContent>
+               
 
               </div>
              
                {/* <Stats /> */}
     </div>
     
-
-           <div className='items-center justify-center hidden lg:flex lg:w-1/2'>
-              <img src={heroImage} alt="Hero" className='w-full h-auto transition-transform duration-500 ease-in-out rounded-3xl hover:scale-105' />
-            </div>
+      <div className='nefesta text-[#a3c300]  text-[12px] mt-12'>UI DESIGNING</div>
     </div>
     
     </section>

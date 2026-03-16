@@ -5,6 +5,9 @@ import About from './Components/About'
 import MyProject from './Components/my_Project';
 import ContactMe from './Components/ContactMe';
 import GitConnect from './Components/GitConnect'; 
+import Connect from './SECTIONS/Connect';
+import Expertise from './SECTIONS/Expertise';
+import Subnetworking from './SECTIONS/SUBSECTIONS/Subnetworking';
 
 
 
@@ -16,8 +19,11 @@ function App() {
       <Hero />
       <About /> 
       <MyProject />
+      <Expertise />
       <ContactMe />
-      <GitConnect />
+      <Connect />
+      <Subnetworking />
+      
     
     </main>
   )

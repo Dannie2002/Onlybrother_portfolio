@@ -36,7 +36,7 @@ export default function ContactMe() {
     <section className="flex flex-col lg:flex-row items-center justify-center min-h-[60vh] w-full px-6 py-16 gap-12 bg-[#0b0b0d] lg:px-36 lg:py-24">
       {/* Left Side */}
       <div className="flex flex-col items-start justify-center flex-1 mb-8 lg:mb-0">
-        <h2 className="mb-4 text-4xl font-extrabold text-white altere"
+        <h2 className="mb-4 text-4xl text-white golant"
         >Get in <span className="text-[#8b949e]"><Highlighter padding={10} color='#177A96' action='underline'>Touch</Highlighter></span></h2>
         <p className="max-w-md text-lg text-[#8b949e]">
           Have a question, project, or just want to say hi? Fill out the form and I'll get back to you as soon as possible!

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @font-face {
@@ -7,54 +9,65 @@
 
 }
 @font-face {
-  font-family: 'golant';
-  src: url('./assets/Fonts/golant.otf');
+  font-family: 'kasnova';
+  src: url('./assets/Fonts/kasnova.otf');
 }
 @font-face {
-  font-family: 'altere';
-  src: url('./assets/Fonts/altere.ttf') format('opentype');
+  font-family: 'oritech';
+  src: url('./assets/Fonts/oritech.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'geonova';
-  src: url();
+  font-family: 'nefesta';
+  src: url('./assets/Fonts/nefesta.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
-
 :root{
+  --font-zalando: 'Zalando Sans Expanded', sans-serif;
     --font-geologica: 'Geologica', sans-serif;
     --font-outfit: 'Outfit', sans-serif;
     --font-avenue: 'guffber-regular', sans-serif;
     --font-worky:'worky';
-    --font-golant:'golant';
-    --font-altere:'altere';
+    --font-kasnova:'kasnova';
+    --font-nefesta:'nefesta';
+    --font-oritech:'oritech';
+    --font-chivo:'Chivo Mono';
 }
 
 body {
-    font-family: var(--font-outfit);
+    font-family: var(--font-geologica);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.chivo{
+  font-family: var(--font-chivo);
 }
 
 .para{
   font-family: var(--font-guffber-regular);
 }
-.worky{
-  font-family: var(--font-worky);
+.nefesta{
+  font-family: var(--font-nefesta);
 }
 
 .golant{
-  font-family: var(--font-golant);
+  font-family: var(--font-kasnova);
 }
-.geonova{
-  font-family: var(--font-geonova);
+.geologica{
+  font-family: var(--font-Geologica);
 }
-.altere{
-  font-family: var(--font-altere);
+.zalando{
+  font-family: var(--font-zalando);
 }
+.oritech{
+  font-family: var(--font-oritech);
+}
+
 @keyframes shine {
   0% {
     background-position: -100% 0;
@@ -85,7 +98,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #5176A3, #5176A3);
+  background: linear-gradient(90deg, #125d95, #5176A3);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 400ms ease;
@@ -149,4 +162,29 @@ body {
   50% {
     background-position: 100% 50%;
   }
+}
+
+.box-wrapper{
+  position: relative;
+  display: block;
+  border-radius: inherit;
+}
+.box-wrapper::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #003521; /* border color */
+  -webkit-clip-path: polygon(100% 0, 100% 82%, 82% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 82%, 82% 100%, 0 100%, 0 0);
+  border-radius: inherit;
+  z-index: 0;
+}
+.box{
+  position: relative;
+  z-index: 1;
+  margin: 6px; /* border thickness */
+  -webkit-clip-path: polygon(100% 0, 100% 82%, 82% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 85%, 85% 100%, 0 100%, 0 0);
+  border-radius: inherit;
+  overflow: hidden;
 }
