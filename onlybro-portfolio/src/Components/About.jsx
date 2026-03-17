@@ -17,47 +17,48 @@ const About = () => {
     <section
       className='relative min-h-screen bg-[#f6f6f7] '
     >
-<div className='flex flex-row h-screen' >
-<div className='w-1/2'>
-      <img src={Set} alt='grid' className=' h-full w-full object-cover' />  
-</div>
-<div className='w-1/2 flex flex-col items-start justify-start bg-[#f6f6f7] p-12'>
-     <h1 className='text-3xl orizon text-start lg:text-[18px] uppercase text-[#125d95]'>
+<div className='flex flex-col px-6 py-8 lg:px-22 mt-12 ' >
+    
+<div className=' flex flex-col items-start justify-start  lg:p-12'>
+     <h1 className='text-[16px] zalando font-bold text-start lg:text-[18px] uppercase text-[#125d95]'>
            About Me
      </h1>
           <div className='w-10 h-1 mt-3 bg-[#1284b1]'></div>
 
-            <div className='flex flex-row items-start justify-between gap-12 mt-4'>
-              <div className='w-full'>
-                <motion.p
+           
+              <div className='w-full mt-12'>
+                <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2, ease: 'easeOut', delay: 0.2 }}
-                  className='text-[16px] text-[#4a4a4a] zalando leading-relaxed'
+                  className='text-[36px] leading-[36px] font-bold text-[#4a4a4a] chivo text-center lg:text-start'
                 >
                   I'm a passionate Network Engineer with a knack for solving complex problems and optimizing network performance.
-                   With over 5 years of experience in designing, implementing, and managing robust
-                   network infrastructures, I thrive on ensuring seamless connectivity and security for businesses of all sizes. 
+                   
 
-                </motion.p>                       
-                  
-              <div className='mt-12 flex flex-row items-center justify-between'>
-                <div className='flex flex-col gap-3  items-start justify-center'>
-                   <h4 className='orizon text-[22px] text-[#125d95]'>My Mission</h4>
-                   <p className='zalando text-start text-[#4a4a4a]'>Design, Implementing and supporting reliable IT environments end to end.</p>
+                </motion.h1>                       
+                  </div>
+              <div className='mt-12 flex flex-col lg:flex-row items-center gap-22 justify-center'>
+                  <div className='flex items-center justify-center'>
+                     <img src={Set} alt='grid' className=' h-[490px] rounded-[14px] w-full lg:w-[370px] object-cover' />  
+                   </div>
+                   <div className='flex flex-col gap-8'>
+                    <div className='flex flex-col gap-3 items-center lg:items-start justify-center'>
+                   <h4 className='chivo uppercase text-[26px] font-bold text-[#125d95]'>My Mission</h4>
+                   <p className='text-[18px] text-center lg:text-[28px] zalando text-[#4a4a4a] lg:max-w-[400px] font-semibold leading-[28px] lg:leading-[38px] lg:text-start'>Design, Implementing and supporting reliable IT environments end to end.</p>
 
                 </div>
               
-              <div className='flex flex-col gap-3  items-start justify-center'>
-                   <h4 className='orizon text-[22px] text-[#125d95] '>My Vision</h4>
-                   <p className='zalando text-[#4a4a4a] text-start'>To build reliable and scalable technology ecosystems that empower people and business.</p>
+              <div className='flex flex-col gap-3 items-center  lg:items-start justify-center'>
+                   <h4 className='chivo uppercase text-[26px] font-bold text-[#125d95] '>My Vision</h4>
+                   <p className='text-[18px] lg:text-[28px] zalando text-[#4a4a4a] lg:max-w-[400px] font-semibold leading-[28px] lg:leading-[38px] text-center lg:text-start'>To build reliable and scalable technology ecosystems that empower people and business.</p>
 
                 </div>
-            </div>  
+                   </div>
+               
+            
 
-            <div className='mt-14 bg-[#125d95] p-6 rounded-[4px]'>
-              <Stats />
-            </div>
+            
 
 
               </div>
@@ -65,7 +66,7 @@ const About = () => {
                 
                 
                   
-            </div>
+            
 </div>
 
 

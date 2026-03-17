@@ -16,14 +16,14 @@ const Subnetworking = () => {
         <div className='relative h-64 flex items-end justify-start' style={{ background: `url(${subnetworking}) center/cover fixed no-repeat` }}>
         <div className="absolute size-full opacity-60 z-0 bg-[#323232] "></div> 
         <div className='flex z-5 p-8 flex-row items-center justify-center gap-6'>
-           <ArrowDown color='#aafabb' size={30} className='font-bold' />
-           <h1 className='text-4xl chivo uppercase font-bold  text-[#fffced]'>Networking</h1>
+           <ArrowDown color='#fffced' size={30} className='font-bold' />
+           <h1 className='text-4xl chivo uppercase font-bold  text-[#a3c300]'>Networking</h1>
         </div>
           
         </div>
 
-        <div className='mt-12'>
-            <h4 className='text-4xl zalando uppercase font-bold text-[#fffced] '>Our Networking Services</h4>
+        <div className='mt-12 lg:px-22'>
+            <h4 className='text-4xl chivo uppercase font-bold text-[#fffced] '>What i do in Netwoking</h4>
 
         </div>
  

@@ -74,7 +74,7 @@ const ProjectCard = ({ project }) => {
     >
         <div className='absolute group-hover:bg-gradient-to-t from-[#125d95]/60 to-[#125d95]/30 transition-all duration-500 bg-blend-multiply z-10 size-full bg-[#0b0b0d]/40'></div>
         
-        <div className='w-full overflow-hidden h-[490px] relative'>
+        <div className='w-full overflow-hidden h-[340px] lg:h-[490px] relative'>
           <img
             src={project.image}
             alt={project.title}
@@ -131,7 +131,7 @@ const Expetise = () => {
           <h1 className='text-4xl  zalando font-semibold text-center lg:text-[20px] uppercase text-[#a3c300]'>
            Expertise
           </h1>
-          <div className='w-10 h-1 mt-3 bg-[#a3c300]'></div>
+          <div className='w-10 h-1 mt-6 bg-[#a3c300]'></div>
       
         <h4
        
@@ -140,7 +140,7 @@ const Expetise = () => {
         </h4>
       </div>
 
-      <div className='grid grid-cols-1 gap-6 lg:mt-22 lg:gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-6 mt-12 lg:mt-22 lg:gap-4 sm:grid-cols-2 lg:grid-cols-3'>
         {projects.map((p, i) => (
           <ProjectCard key={p.title ?? i} project={p} />
         ))}

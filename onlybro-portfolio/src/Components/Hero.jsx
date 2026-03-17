@@ -80,9 +80,9 @@ useGSAP(() => {
                     <h1 className="head text-[78px] leading-[78px] text-center text-[#fffced] lg:text-start chivo font-extrabold uppercase mt-2  lg:text-[108px] lg:leading-[108px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
                     <p className='chivo lg:text-left text-center text-[16px] w-[330px] text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
              
-              <div className='flex lg:flex-row flex-col justify-center gap-6'>
+              <div className='flex lg:flex-row flex-col  justify-center gap-6'>
               
-                 <a href="#contact" className=" text-[16px]  inline-flex items-center justify-center px-6 py-2 text-[#fffced] zalando transition-all duration-400 rounded bg-[#125D98] hover:bg-[#5176A3/60] hover:text-white box-border border-2 border-transparent">
+                 <a href="#contact" className=" text-[16px]   lg:inline-flex items-center justify-center px-6 py-2 text-[#fffced] zalando transition-all duration-400 rounded bg-[#125D98] hover:bg-[#5176A3/60] hover:text-white box-border border-2 border-transparent">
                    View Projects
                  </a>
             

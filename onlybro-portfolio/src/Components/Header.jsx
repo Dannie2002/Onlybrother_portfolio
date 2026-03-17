@@ -8,7 +8,7 @@ const Header = () => {
     <div className="fixed top-0 left-0 z-50 w-full ">
       <div className='flex items-center justify-between px-24 py-4 lg:px-36'>
         <a href="#home" className="flex items-center">
-          <h1 className=" text-[#125d95] text-[16px] zalando uppercase font-bold ">
+          <h1 className=" text-[#a3c300] text-[16px] zalando uppercase font-bold ">
             Only Brother
           </h1>
         </a>
