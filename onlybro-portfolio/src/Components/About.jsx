@@ -45,13 +45,13 @@ const About = () => {
                    <div className='flex flex-col gap-8'>
                     <div className='flex flex-col gap-3 items-center lg:items-start justify-center'>
                    <h4 className='chivo uppercase text-[26px] font-bold text-[#125d95]'>My Mission</h4>
-                   <p className='text-[18px] text-center lg:text-[28px] zalando text-[#4a4a4a] lg:max-w-[400px] font-semibold leading-[28px] lg:leading-[38px] lg:text-start'>Design, Implementing and supporting reliable IT environments end to end.</p>
+                   <p className='text-[18px] text-center lg:text-[22px] zalando text-[#4a4a4a] lg:max-w-[400px] font-semibold leading-[28px] lg:leading-[38px] lg:text-start'>Design, Implementing and supporting reliable IT environments end to end.</p>
 
                 </div>
               
               <div className='flex flex-col gap-3 items-center  lg:items-start justify-center'>
                    <h4 className='chivo uppercase text-[26px] font-bold text-[#125d95] '>My Vision</h4>
-                   <p className='text-[18px] lg:text-[28px] zalando text-[#4a4a4a] lg:max-w-[400px] font-semibold leading-[28px] lg:leading-[38px] text-center lg:text-start'>To build reliable and scalable technology ecosystems that empower people and business.</p>
+                   <p className='text-[18px] lg:text-[22px] zalando text-[#4a4a4a] lg:max-w-[400px] font-semibold leading-[28px] lg:leading-[38px] text-center lg:text-start'>To build reliable and scalable technology ecosystems that empower people and business.</p>
 
                 </div>
                    </div>
