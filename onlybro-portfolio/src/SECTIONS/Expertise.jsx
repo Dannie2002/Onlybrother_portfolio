@@ -126,16 +126,17 @@ const Expetise = () => {
 });
 
   return (
-    <section id='projects' className='relative z-10 min-h-screen px-6 py-12 lg:px-24 bg-[#323232]'>
+    <section id='projects' className='Section_bg'>
+      <div className='Section_wrapper'>
       <div className='flex flex-col items-start justify-center mb-8 lg:mt-12'>  
-          <h1 className='text-4xl  zalando font-semibold text-center lg:text-[20px] uppercase text-[#a3c300]'>
+          <h1 className='text-4xl  zalando font-semibold text-center lg:text-[20px] uppercase text-[#036043]'>
            Expertise
           </h1>
-          <div className='w-10 h-1 mt-6 bg-[#a3c300]'></div>
+          <div className='w-10 h-1 mt-6 bg-[#036043]'></div>
       
         <h4
        
-        className='subheading chivo lg:leading-[48px] lg:text-[42px] text-[#fffced] lg:max-w-6xl mt-4'>
+        className='subheading lg:leading-[48px] lg:text-[42px] text-[#4a4a4a] lg:max-w-6xl mt-10'>
           Enhancing network performance through robust design and expert implementation.
         </h4>
       </div>
@@ -145,6 +146,7 @@ const Expetise = () => {
           <ProjectCard key={p.title ?? i} project={p} />
         ))}
       </div>
+    </div>
     </section>
   )
 }
