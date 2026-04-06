@@ -35,26 +35,24 @@ useGSAP(() => {
 }, []);
 
   return (
-    <section className='relative z-10 flex flex-col bg-[#F2EBDF] min-h-screen overflow-hidden px-6 lg:px-36 items-center justify-center' style={{ background: `url(${heroImage}) center/cover fixed no-repeat` }}>
-      <img src={noise} alt="noise" className="absolute inset-0 w-full mix-blend-multiply opacity-40 h-full object-cover"/>
-    {/* Background blur circles */}
-         <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
-              <div className="absolute size-full opacity-60  bg-[#323232] "></div>
-               <div className="hidden absolute top-40 left-32 w-[32rem] h-[32rem] rounded-full bg-[#125d95] opacity-95 blur-[120px]"></div>
-              <div className="absolute hidden bottom-44 left-90 w-[48rem] h-[18rem] rounded-full bg-[#000000] opacity-20 "></div>
-            </div>
+    <section className='Section_bg bg-[#0b0b0d] z-0' >
+ 
+  
+             
+               
+             
             
            
      
                {/* Decorative particles */}
-            <div className="relative  pointer-events-none z-30">
+            <div className="relative  pointer-events-none z-0">
                {/* Arrow particles */}
                <DottedArrow color="#a3c300" size={70} className="absolute top-95 left-0"  />
                 
             </div>
 
-    <div className="relative z-20 flex flex-col items-center w-full gap-12 py-12 lg:mt-6 lg:flex-row lg:items-start lg:justify-between max-w-7xl lg:py-0 lg:gap-6">
-       <div className="flex mt-12  flex-col z-50 items-center lg:items-start justify-center space-y-6 lg:mt-12">
+    <div className="Section_wrapper z-50">
+       <div className="flex mt-12  flex-col  items-center  justify-center space-y-6 lg:mt-12">
             <motion.h1 className="text-[16px] text-[#fffced] font-bold text-center leading-[22px]  lg:text-left lg:text-[14px] lg:leading-[14px] chivo"
              initial={{ opacity: 0, x: -37 }}
              animate={{ opacity: 1, x: 0 }}
@@ -73,14 +71,14 @@ useGSAP(() => {
                <FlipWords
                    words={['Full-Stack Developer', 'UI/UX Designer']}
                    interval={3000}
-                    className="text-[18px] lg:text-[20px] zalando font-bold text-center lg:text-left uppercase text-[#fffced] mb-2"
+                    className="text-[18px] lg:text-[18px] zalando font-bold text-center  uppercase text-[#fffced] mb-2"
                 />
               </motion.div>
             
-                    <h1 className="head text-[78px] leading-[78px] text-center text-[#fffced] lg:text-start chivo font-extrabold uppercase mt-2  lg:text-[108px] lg:leading-[108px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
-                    <p className='chivo lg:text-left text-center text-[16px] w-[330px] text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
+                    <h1 className="head text-[78px] z-50 leading-[78px] text-center text-[#fffced]  chivo font-extrabold  mt-2  lg:text-[98px] lg:leading-[98px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
+                    <p className='chivo text-center text-[16px] w-[530px] z-50 text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
              
-              <div className='flex lg:flex-row flex-col  justify-center gap-6'>
+              <div className='flex lg:flex-row z-50 flex-col  justify-center gap-6'>
               
                  <a href="#contact" className=" text-[16px]   lg:inline-flex items-center justify-center px-6 py-2 text-[#fffced] zalando transition-all duration-400 rounded bg-[#125D98] hover:bg-[#5176A3/60] hover:text-white box-border border-2 border-transparent">
                    View Projects
@@ -97,7 +95,7 @@ useGSAP(() => {
                {/* <Stats /> */}
     </div>
     
-      <div className='nefesta text-[#a3c300]  text-[12px] mt-12'>UI DESIGNING</div>
+      
     </div>
     
     </section>
