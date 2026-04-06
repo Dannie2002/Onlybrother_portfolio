@@ -253,7 +253,7 @@ body {
 }
 
 .Glassy_btn{
-  @apply flex border cursor-pointer  transition-transform duration-460 ease-in-out hover:-translate-y-2 hover:shadow-[2px_4px_20px_rgba(178,127,50,0.6)] shadow-[0_6px_12px_rgba(178,127,50,0.4)]  border-[#fffced]/30 items-center justify-center rounded-sm backdrop-blur-2xl bg-[#fffced]/40 mt-6 w-fit px-6 py-3  gap-4 
+  @apply flex border cursor-pointer  transition-transform duration-460 ease-in-out hover:-translate-y-2 hover:shadow-[2px_4px_20px_rgba(3,96,67,0.6)] shadow-[0_6px_12px_rgba(3,96,67,0.4)]  border-[#fffced]/30 items-center justify-center rounded-sm backdrop-blur-2xl bg-[#fffced]/40 mt-6 w-fit px-6 py-3  gap-4 
 }
 
 }

@@ -8,7 +8,7 @@ import web from '../assets/Images/Web-redesign.jpg'
 
 const projects = [
   {
-    title: 'Portfolio Redesign',
+    title: 'MwAPATA INSTITUTE WEBSITE DEVELOPMENT',
     description: 'A minimal, responsive portfolio with custom animations and glassmorphism.',
     tech: ['React', 'Tailwind', 'Framer Motion'],
     link: '#',
@@ -104,18 +104,18 @@ const MyProject = () => {
     listRef.current.scrollBy({ left: -scrollAmount(), behavior: 'smooth' })
   }
   return (
-    <section id='projects' className='relative z-10 min-h-screen px-6 py-12 lg:px-24 bg-[#ffffff]'>
-      <div className='flex flex-col items-start justify-center mb-8'>  
-          <h1 className='text-3xl zalando font-bold  text-center lg:text-[20px] uppercase text-[#125D98]'>
+    <section id='projects' className='Section_bg bg-[#0b0b0d]'>
+      <div className='Section_wrapper flex items-center justify-center flex-col'>  
+          <h1 className='text-3xl zalando font-bold  text-center lg:text-[18px] uppercase text-[#b27f32]'>
            My projects
           </h1>
-          <div className='w-10 h-1 mt-3 bg-[#6c7606]'></div>
-       <h4 className='chivo font-semibold lg:leading-[48px] lg:text-[42px] text-[#4a4a4a] lg:max-w-6xl mt-8'>
-          A curated selection of work highlighting design clarity, performance, and clean code.
+          <div className='w-10 h-1 mt-3 bg-[#b27f32]'></div>
+       <h4 className='chivo text-center font-semibold lg:leading-[48px] lg:text-[42px] text-[#fffced] lg:max-w-6xl mt-8'>
+          A curated selection of work highlighting design clarity, <span className='text-[#b9b8b6]'>performance, and clean code.</span>
         </h4>
       </div>
 
-      <div ref={listRef} className='flex flex-col gap-4 lg:mt-22 lg:gap-8 lg:flex-row pb-4'>
+      <div ref={listRef} className='flex flex-col gap-4 lg:mt-18 lg:gap-8 lg:flex-row pb-4'>
         {projects.map((p) => (
           <ProjectCard
             key={p.title}

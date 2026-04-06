@@ -36,7 +36,9 @@ useGSAP(() => {
 
   return (
     <section className='Section_bg relative flex items-center justify-center bg-[#0b0b0d] z-0' >
- 
+               <div className='absolute size-96 opacity-5 blur-2xl bg-[#036043]  left-[10%] z-0'>
+         
+            </div> 
   
             <div className='absolute size-96 opacity-5 blur-2xl bg-[#b27f32]  left-[80%] z-0'>
          
@@ -46,16 +48,14 @@ useGSAP(() => {
             
            
      
-               {/* Decorative particles */}
-            <div className="relative  pointer-events-none z-0">
+          
                {/* Arrow particles */}
-               <DottedArrow color="#b27f32" size={70} className="absolute top-95 left-0"  />
-                
-            </div>
+               <DottedArrow color="#036043" size={70} className="absolute z-50 top-95 left-0"  />
+        
 
     <div className="Section_wrapper flex items-center justify-center z-50">
        <div className="flex  flex-col  items-center  justify-center space-y-6 ">
-            <motion.h1 className="text-[16px] text-[#fffced] font-bold text-center leading-[22px]  lg:text-left lg:text-[14px] lg:leading-[14px] chivo"
+            <motion.h1 className="text-[16px] text-[#b27f32] font-bold text-center leading-[22px]  lg:text-left lg:text-[14px] lg:leading-[14px] chivo"
              initial={{ opacity: 0, x: -37 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ delay: 0.5, ease: "easeOut" }}
@@ -77,12 +77,12 @@ useGSAP(() => {
                 />
               </motion.div>
             
-                    <h1 className="head text-[48px] z-50 leading-[48px] text-center text-[#fffced]  chivo font-extrabold  mt-2  lg:text-[88px] lg:leading-[88px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
+                    <h1 className="head text-[48px] z-50 leading-[48px] text-center text-[#fffced]  chivo font-semibold  mt-2  lg:text-[88px] lg:leading-[88px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
                     <p className='chivo text-center text-[16px] lg:w-[530px] z-50 text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
              
               <div className='flex lg:flex-row z-50 flex-col items-center justify-center gap-3 lg:gap-6'>
               
-                 <button href="#contact" className=" Glassy_btn bg-[#b27f32] text-[#fffced]  hover:bg-[#b27f32]/60">
+                 <button href="#contact" className=" Glassy_btn bg-[#036043] text-[#fffced] zalando  hover:bg-[#b27f32]/60">
                    View Projects
                  </button>
             

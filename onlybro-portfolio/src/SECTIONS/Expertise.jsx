@@ -72,7 +72,7 @@ const ProjectCard = ({ project }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-        <div className='absolute group-hover:bg-gradient-to-t from-[#125d95]/60 to-[#125d95]/30 transition-all duration-500 bg-blend-multiply z-10 size-full bg-[#0b0b0d]/40'></div>
+        <div className='absolute group-hover:bg-gradient-to-t from-[#036043]/60 to-[#036043]/30 transition-all duration-500 bg-blend-multiply z-10 size-full bg-[#0b0b0d]/40'></div>
         
         <div className='w-full overflow-hidden h-[340px] lg:h-[490px] relative'>
           <img
@@ -89,7 +89,7 @@ const ProjectCard = ({ project }) => {
             transition={{ duration: 0.55, ease: 'easeOut' }}
           >
             <div className='flex flex-col'>
-              <Arrow color='#a3c300' size={45} className='group-hover:animate-bounce' />
+              <Arrow color='#036043' size={45} className='group-hover:animate-bounce' />
               <h4 className='text-[#fffced] uppercase chivo font-semibold text-2xl'>{project.title}</h4>
             </div>
 

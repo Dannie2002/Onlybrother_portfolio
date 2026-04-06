@@ -48,7 +48,7 @@ const Header = () => {
           <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-1.5' : 'translate-y-1'}`}></span>
         </button>
 
-        <motion.button className='hidden px-6 py-2.5 text-[#fffced] zalando transition-all duration-300 bg-[#b27f32] rounded-[4px] lg:block  text-[14px]'
+        <motion.button className='hidden px-6 py-2.5 text-[#fffced] zalando transition-all duration-300 bg-[#036043] rounded-[4px] lg:block  text-[14px]'
         whileHover={{boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.3)" }}
         whileTap={{ scale: 0.25 }}
         
