@@ -8,7 +8,7 @@ const Header = () => {
     <div className="fixed top-0 left-0 z-50 w-full ">
       <div className='flex items-center justify-between px-24 py-4 lg:px-36'>
         <a href="#home" className="flex items-center">
-          <h1 className=" text-[#a3c300] text-[16px] zalando uppercase font-bold ">
+          <h1 className=" text-[#b27f32] text-[16px] zalando uppercase font-bold ">
             Only Brother
           </h1>
         </a>
@@ -19,9 +19,9 @@ const Header = () => {
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#about" className='text-[14px]  text-[#fffced] hover:text-[#b98815] transition-all duration-300 relative group'>
+            <a href="#about" className='text-[14px]  text-[#fffced] hover:text-[#b27f32] transition-all duration-300 relative group'>
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b98815] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b27f32] transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a href="#services" className='text-[14px] text-[#fffced] hover:text-[#b98815] transition-all duration-300 relative group'>
               Core Expertise
@@ -48,7 +48,7 @@ const Header = () => {
           <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-1.5' : 'translate-y-1'}`}></span>
         </button>
 
-        <motion.button className='hidden px-6 py-2.5 text-[#fffced] zalando transition-all duration-300 bg-[#125D98] rounded-[4px] lg:block  text-[14px]'
+        <motion.button className='hidden px-6 py-2.5 text-[#fffced] zalando transition-all duration-300 bg-[#b27f32] rounded-[4px] lg:block  text-[14px]'
         whileHover={{boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.3)" }}
         whileTap={{ scale: 0.25 }}
         

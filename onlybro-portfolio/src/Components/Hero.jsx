@@ -35,10 +35,12 @@ useGSAP(() => {
 }, []);
 
   return (
-    <section className='Section_bg bg-[#0b0b0d] z-0' >
+    <section className='Section_bg relative flex items-center justify-center bg-[#0b0b0d] z-0' >
  
   
-             
+            <div className='absolute size-96 opacity-5 blur-2xl bg-[#b27f32]  left-[80%] z-0'>
+         
+            </div> 
                
              
             
@@ -47,12 +49,12 @@ useGSAP(() => {
                {/* Decorative particles */}
             <div className="relative  pointer-events-none z-0">
                {/* Arrow particles */}
-               <DottedArrow color="#a3c300" size={70} className="absolute top-95 left-0"  />
+               <DottedArrow color="#b27f32" size={70} className="absolute top-95 left-0"  />
                 
             </div>
 
-    <div className="Section_wrapper z-50">
-       <div className="flex mt-12  flex-col  items-center  justify-center space-y-6 lg:mt-12">
+    <div className="Section_wrapper flex items-center justify-center z-50">
+       <div className="flex  flex-col  items-center  justify-center space-y-6 ">
             <motion.h1 className="text-[16px] text-[#fffced] font-bold text-center leading-[22px]  lg:text-left lg:text-[14px] lg:leading-[14px] chivo"
              initial={{ opacity: 0, x: -37 }}
              animate={{ opacity: 1, x: 0 }}
@@ -65,7 +67,7 @@ useGSAP(() => {
               initial={{opacity:0, x:-37}}
               animate={{ opacity: 1, x: 0 }}
               transition={{duration:0.4, delay: 0.5, ease: "easeOut" }}>
-                <span className="text-[18px] lg:text-[20px] zalando font-semibold text-center lg:text-left uppercase text-[#a3c300] mb-2">
+                <span className="text-[18px] lg:text-[20px] zalando font-semibold text-center lg:text-left uppercase text-[#b27f32] mb-2">
                   a&nbsp;
                  </span>
                <FlipWords
@@ -75,19 +77,19 @@ useGSAP(() => {
                 />
               </motion.div>
             
-                    <h1 className="head text-[78px] z-50 leading-[78px] text-center text-[#fffced]  chivo font-extrabold  mt-2  lg:text-[98px] lg:leading-[98px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
-                    <p className='chivo text-center text-[16px] w-[530px] z-50 text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
+                    <h1 className="head text-[48px] z-50 leading-[48px] text-center text-[#fffced]  chivo font-extrabold  mt-2  lg:text-[88px] lg:leading-[88px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
+                    <p className='chivo text-center text-[16px] lg:w-[530px] z-50 text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
              
-              <div className='flex lg:flex-row z-50 flex-col  justify-center gap-6'>
+              <div className='flex lg:flex-row z-50 flex-col items-center justify-center gap-3 lg:gap-6'>
               
-                 <a href="#contact" className=" text-[16px]   lg:inline-flex items-center justify-center px-6 py-2 text-[#fffced] zalando transition-all duration-400 rounded bg-[#125D98] hover:bg-[#5176A3/60] hover:text-white box-border border-2 border-transparent">
+                 <button href="#contact" className=" Glassy_btn bg-[#b27f32] text-[#fffced]  hover:bg-[#b27f32]/60">
                    View Projects
-                 </a>
+                 </button>
             
-                 <a href="#cv" className="text-[16px] zalando inline-flex items-center justify-center px-6 py-2 text-[#fffced] transition-all duration-300 bg-transparent border rounded border-[#fffced] hover:text-white gap-2 box-border hover:border-none btn-fill-sweep">
+                 <button href="#cv" className="Glassy_btn bg-transparent text-white zalando hover:border-none btn-fill-sweep">
                    <FaFileDownload size={15} />
-                   <span className="relative z-10">Download CV</span>
-                 </a>
+                   <span className="relative z-10 white">Download CV</span>
+                 </button>
                
 
               </div>
