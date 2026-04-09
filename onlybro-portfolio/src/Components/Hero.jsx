@@ -9,6 +9,8 @@ import arrow from '../assets/arrow2.png'
 import noise from "../assets/Noise.png"
 import ink from '../assets/ink.png'
 import electric from'../assets/electric.png'
+import code_head from '../assets/Images/CodeHead6.png'
+import head from '../assets/Images/CodeHead3.png'
 import SocialMediaIcon from './SocialMediaIcon';
 import { FaFileDownload } from 'react-icons/fa';
 import {motion} from 'framer-motion';
@@ -36,21 +38,23 @@ useGSAP(() => {
 
   return (
     <section className='Section_bg relative flex items-center justify-center bg-[#0b0b0d] z-0' >
-               <div className='absolute size-96 opacity-5 blur-2xl bg-[#036043]  left-[10%] z-0'>
-         
-            </div> 
-  
-            <div className='absolute size-96 opacity-5 blur-2xl bg-[#b27f32]  left-[80%] z-0'>
-         
-            </div> 
-               
-             
+               <div className='absolute size-96 opacity-5 blur-2xl bg-[#036043]  left-[10%] z-0'></div> 
+               <div className='absolute size-96 opacity-5 blur-2xl bg-[#b27f32]  left-[80%] z-0'> </div> 
+                {/* Arrow particles */}
+               <DottedArrow color="#036043" size={70} className="absolute z-50 bottom-0 left-0"  />
+               <img src={noise} alt="Noise" className="absolute top-0 left-0 w-full h-full object-cover opacity-10 z-10" />
+               <div className=' absolute  -top-15 opacity-50  object-cover z-10'>
+                   <img src={code_head} alt="Code Head" className="w-screen " />
+               </div>
+                 <div className=' absolute  -bottom-5  right-34 opacity-65  object-cover z-20'>
+                   <img src={head} alt="head" className="size-44 " />
+               </div>
+                
             
            
      
           
-               {/* Arrow particles */}
-               <DottedArrow color="#036043" size={70} className="absolute z-50 top-95 left-0"  />
+              
         
 
     <div className="Section_wrapper flex items-center justify-center z-50">
