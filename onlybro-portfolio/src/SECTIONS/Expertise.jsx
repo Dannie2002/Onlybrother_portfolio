@@ -72,7 +72,7 @@ const ProjectCard = ({ project }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-        <div className='absolute group-hover:bg-gradient-to-t from-[#036043]/60 to-[#036043]/30 transition-all duration-500 bg-blend-multiply z-10 size-full bg-[#0b0b0d]/40'></div>
+        <div className='absolute group-hover:bg-gradient-to-t from-(--primary-color)/60 to-(--primary-color)/30 transition-all duration-500 bg-blend-multiply z-10 size-full bg-[#0b0b0d]/40'></div>
         
         <div className='w-full overflow-hidden h-[340px] lg:h-[490px] relative'>
           <img
@@ -89,7 +89,7 @@ const ProjectCard = ({ project }) => {
             transition={{ duration: 0.55, ease: 'easeOut' }}
           >
             <div className='flex flex-col'>
-              <Arrow color='#036043' size={45} className='group-hover:animate-bounce' />
+              <Arrow color='#b27f32' size={45} className='group-hover:animate-bounce' />
               <h4 className='text-[#fffced] uppercase chivo font-semibold text-2xl'>{project.title}</h4>
             </div>
 
@@ -129,7 +129,7 @@ const Expetise = () => {
     <section id='projects' className='Section_bg'>
       <div className='Section_wrapper'>
       <div className='flex flex-col items-start justify-center mb-8 lg:mt-12'>  
-          <h1 className='text-4xl  zalando font-semibold text-center lg:text-[20px] uppercase text-[#036043]'>
+          <h1 className='text-4xl  zalando font-semibold text-center lg:text-[20px] uppercase text-(--primary-color)'>
            Expertise
           </h1>
           <div className='w-10 h-1 mt-6 bg-[#036043]'></div>

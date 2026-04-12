@@ -9,7 +9,9 @@ import arrow from '../assets/arrow2.png'
 import noise from "../assets/Noise.png"
 import ink from '../assets/ink.png'
 import electric from'../assets/electric.png'
-import code_head from '../assets/Images/CodeHead6.png'
+import cloud from '../assets/Images/CLOUD1.png'
+import hero_photo from '../assets/Images/HeroPhoto.jpg'
+import laptop from '../assets/Images/Laptop2.png'
 import head from '../assets/Images/CodeHead3.png'
 import SocialMediaIcon from './SocialMediaIcon';
 import { FaFileDownload } from 'react-icons/fa';
@@ -24,6 +26,13 @@ gsap.registerPlugin(useGSAP, SplitText);
 
 const Hero = () => {
 
+  const bg = {
+    backgroundImage: `url(${hero_photo})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  };
+
 useGSAP(() => {
   const heroSplit = new SplitText(".head", { type: "lines, words, chars" });
   gsap.from(heroSplit.chars, {
@@ -37,28 +46,25 @@ useGSAP(() => {
 }, []);
 
   return (
-    <section className='Section_bg relative flex items-center justify-center bg-[#0b0b0d] z-0' >
+    <section className='Section_bg flex items-start justify-center flex-col relative z-0' style={bg} >
                <div className='absolute size-96 opacity-5 blur-2xl bg-[#036043]  left-[10%] z-0'></div> 
                <div className='absolute size-96 opacity-5 blur-2xl bg-[#b27f32]  left-[80%] z-0'> </div> 
                 {/* Arrow particles */}
-               <DottedArrow color="#036043" size={70} className="absolute z-50 bottom-0 left-0"  />
-               <img src={noise} alt="Noise" className="absolute top-0 left-0 w-full h-full object-cover opacity-10 z-10" />
-               <div className=' absolute  -top-15 opacity-50  object-cover z-10'>
-                   <img src={code_head} alt="Code Head" className="w-screen " />
+               <DottedArrow color="#b27f32" size={70} className="absolute z-50 bottom-0 left-0"  />
+               <img src={noise} alt="Noise" className="absolute top-0 left-0 w-full h-full object-cover opacity-40 z-10" />
+               <div className=' absolute  top-0 -left-290  object-cover z-10'>
+                   <img src={cloud} alt="Cloud" className="" />
                </div>
-                 <div className=' absolute  -bottom-5  right-34 opacity-65  object-cover z-20'>
-                   <img src={head} alt="head" className="size-44 " />
+                 <div className=' absolute bg-[#0b0b0d]  size-full  right-0 opacity-55  object-cover z-20'>
+                   
                </div>
-                
+
+             
             
            
-     
-          
-              
-        
+    <div className="lg:px-22 px-6 z-50">
 
-    <div className="Section_wrapper flex items-center justify-center z-50">
-       <div className="flex  flex-col  items-center  justify-center space-y-6 ">
+       <div className="flex  flex-col  items-start  justify-center space-y-6 ">
             <motion.h1 className="text-[16px] text-[#b27f32] font-bold text-center leading-[22px]  lg:text-left lg:text-[14px] lg:leading-[14px] chivo"
              initial={{ opacity: 0, x: -37 }}
              animate={{ opacity: 1, x: 0 }}
@@ -81,12 +87,12 @@ useGSAP(() => {
                 />
               </motion.div>
             
-                    <h1 className="head text-[48px] z-50 leading-[48px] text-center text-[#fffced]  chivo font-semibold  mt-2  lg:text-[88px] lg:leading-[88px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
-                    <p className='chivo text-center text-[16px] lg:w-[530px] z-50 text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
+                    <h1 className="head text-[48px] z-50 leading-[48px] text-center text-[#fffced]  chivo font-semibold  mt-2  lg:text-[58px] lg:leading-[58px] tracking-wide  lg:max-w-full">Letting Digital Reign.</h1>
+                    <p className='chivo text-left text-[16px] lg:w-[530px] z-50 text-[#fffced]'>Enhancing network performance through robust design and expert implementation. </p>
              
               <div className='flex lg:flex-row z-50 flex-col items-center justify-center gap-3 lg:gap-6'>
               
-                 <button href="#contact" className=" Glassy_btn bg-[#036043] text-[#fffced] zalando  hover:bg-[#b27f32]/60">
+                 <button href="#contact" className=" Glassy_btn bg-[#b27f32] text-[#fffced] zalando  hover:bg-[#b27f32]/60">
                    View Projects
                  </button>
             
@@ -99,7 +105,9 @@ useGSAP(() => {
               </div>
              
                {/* <Stats /> */}
-    </div>
+   
+       </div>
+       
     
       
     </div>

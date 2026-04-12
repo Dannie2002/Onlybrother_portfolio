@@ -3,6 +3,7 @@ import FadeContent from './FadeContent'
 import GradientText from './GradientText'
 import { Highlighter } from './Highlighter'
 import { motion, AnimatePresence } from 'framer-motion'
+import Mwapata_project from '../assets/Images/Mwapata_project.png'
 import portfolio from '../assets/Images/Portfolio.jpg'
 import web from '../assets/Images/Web-redesign.jpg'
 
@@ -12,7 +13,7 @@ const projects = [
     description: 'A minimal, responsive portfolio with custom animations and glassmorphism.',
     tech: ['React', 'Tailwind', 'Framer Motion'],
     link: '#',
-    image: portfolio
+    image: Mwapata_project
   },
   {
     title: 'Data Visualization and Reporting',
@@ -44,7 +45,7 @@ const ProjectCard = ({ project, isActive, anyActive, onHoverStart, onHoverEnd })
     >
       <div className='absolute inset-0 transition-all duration-500 z-10 pointer-events-none bg-gradient-to-t from-black/40 to-black/10 opacity-90 group-hover:opacity-100'></div>
 
-      <div className='w-full overflow-hidden h-[160px] lg:h-[460px] relative'>
+      <div className='w-full overflow-hidden h-[160px] lg:h-[490px] relative'>
         <img
           src={project.image}
           alt={project.title}
@@ -113,7 +114,7 @@ const MyProject = () => {
        <h4 className='chivo text-center font-semibold lg:leading-[48px] lg:text-[42px] text-[#fffced] lg:max-w-6xl mt-8'>
           A curated selection of work highlighting design clarity, <span className='text-[#b9b8b6]'>performance, and clean code.</span>
         </h4>
-      </div>
+      
 
       <div ref={listRef} className='flex flex-col gap-4 lg:mt-18 lg:gap-8 lg:flex-row pb-4'>
         {projects.map((p) => (
@@ -150,6 +151,7 @@ const MyProject = () => {
             <path d='M9 6l6 6-6 6' strokeLinecap='round' strokeLinejoin='round' />
           </svg>
         </button>
+      </div>
       </div>
     </section>
   )
