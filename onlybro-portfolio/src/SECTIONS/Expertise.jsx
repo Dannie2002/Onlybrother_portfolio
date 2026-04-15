@@ -1,5 +1,6 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import Network from '../assets/Images/Networking.jpg'
 import Webdev from '../assets/Images/WebDev.jpg'
 import Design from '../assets/Images/Designing.jpg'
@@ -68,8 +69,25 @@ const projects = [
 
 
 
-
 const Expetise = () => {
+
+    const [page, setPage] = useState(0);
+  const cardsPerPage = 4;
+
+  const start = page * cardsPerPage;
+  const visibleProjects = projects.slice(start, start + cardsPerPage);
+
+  const nextPage = () => {
+    if ((page + 1) * cardsPerPage < projects.length) {
+      setPage(page + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (page > 0) {
+      setPage(page - 1);
+    }
+  };
 
  
 
@@ -84,36 +102,51 @@ const Expetise = () => {
           A curated selection of work highlighting design clarity, <span className='text-[#605f5d]'>performance, and clean code.</span>
         </h4>
   
-    <div className='Grid_4 lg:gap-12 '>
-      {projects.slice(0,4).map((project,index)=>(
+    <AnimatePresence mode="wait">
+  <motion.div
+    key={page}
+    initial={{ x: 200, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    exit={{ x: -200, opacity: 0 }}
+    transition={{ duration: 0.15, ease: "easeOut"}}
+    className="Grid_4 lg:gap-12"
+  >
+    {visibleProjects.map((project, index) => (
+      <div key={index} className="group relative">
 
-        <div key={project.id} className='group relative '>
-          
-          <div className='h-[470px] relative'>
-            <img src={project.image} alt={project.title} className='object-cover grayscale group-hover:grayscale-0 size-full' />
-            <img src={noise} alt="noise" className="absolute inset-0 size-full mix-blend-multiply opacity-40 object-cover"/>
-            <div className='absolute inset-0 group-hover:bg-gradient-to-t from-(--primary-color)/60 to-(--primary-color)/30 to-transparent transition-all duration-500 bg-blend-multiply z-10 size-full'></div>
-            
-          </div>
+        <div className="h-[470px] relative">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="object-cover grayscale group-hover:grayscale-0 size-full"
+          />
 
-          <div className='flex items-center justify-between py-4'>
-            <h4 className='text-[#4a4a4a] uppercase chivo nefesta text-[24px]'>
-                {project.title}
-            </h4>
-            <Arrow color='#b27f32' size={35} className='group-hover:animate-bounce' />
-           </div>
+          <img
+            src={noise}
+            alt="noise"
+            className="absolute inset-0 size-full mix-blend-multiply opacity-40 object-cover"
+          />
 
-        </div>  
-        
-      ))}
-    
+          <div className="absolute inset-0 group-hover:bg-gradient-to-t from-(--primary-color)/60 to-(--primary-color)/30 transition-all duration-500 bg-blend-multiply z-10 size-full"></div>
+        </div>
 
-    </div>
+        <div className="flex items-center justify-between py-4">
+          <h4 className="text-[#4a4a4a] uppercase chivo nefesta text-[24px]">
+            {project.title}
+          </h4>
+
+          <Arrow color="#b27f32" size={35} className="group-hover:animate-bounce" />
+        </div>
+
+      </div>
+    ))}
+  </motion.div>
+</AnimatePresence>
 
 
       <div className='mt-4 flex flex-row items-center justify-start gap-2'>
         <button
-         
+         onClick={prevPage}
            className='inline-flex items-center gap-2 p-2 bg-[#4a4a4a]/40 text-white rounded-full shadow hover:bg-[#0f4f85]'
         >
           <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='w-4 h-4'>
@@ -123,7 +156,7 @@ const Expetise = () => {
         </button>
 
         <button
-        
+        onClick={nextPage}
           className='inline-flex items-center gap-2 p-2 bg-[#4a4a4a]/40 text-white rounded-full shadow hover:bg-[#0f4f85]'
         >
           
