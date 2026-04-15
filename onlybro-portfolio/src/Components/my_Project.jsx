@@ -3,7 +3,7 @@ import FadeContent from './FadeContent'
 import GradientText from './GradientText'
 import { Highlighter } from './Highlighter'
 import { motion, AnimatePresence } from 'framer-motion'
-import Mwapata_project from '../assets/Images/Mwapata_project.png'
+import Mwapata_project from '../assets/Images/MwAPATA_Landing_page.png'
 import portfolio from '../assets/Images/Portfolio.jpg'
 import web from '../assets/Images/Web-redesign.jpg'
 
@@ -43,7 +43,7 @@ const ProjectCard = ({ project, isActive, anyActive, onHoverStart, onHoverEnd })
       onMouseLeave={() => onHoverEnd && onHoverEnd()}
       style={{ flex: isActive ? 2 : anyActive ? 0.8 : 1, minWidth: '90px', transition: 'flex 350ms ease' }}
     >
-      <div className='absolute inset-0 transition-all duration-500 z-10 pointer-events-none bg-gradient-to-t from-black/40 to-black/10 opacity-90 group-hover:opacity-100'></div>
+       <div className='absolute bg-gradient-to-t from-(--primary-color)/90 to-(--primary-color)/30 transition-all duration-500 bg-blend-multiply z-10 size-full '></div>
 
       <div className='w-full overflow-hidden h-[160px] lg:h-[490px] relative'>
         <img
@@ -107,11 +107,11 @@ const MyProject = () => {
   return (
     <section id='projects' className='Section_bg bg-[#0b0b0d]'>
       <div className='Section_wrapper flex items-center justify-center flex-col'>  
-          <h1 className='text-3xl zalando font-bold  text-center lg:text-[18px] uppercase text-[#b27f32]'>
+          <h1 className='text-[14px] zalando font-bold  text-center lg:text-[16px] uppercase text-[#b27f32]'>
            My projects
           </h1>
           <div className='w-10 h-1 mt-3 bg-[#b27f32]'></div>
-       <h4 className='chivo text-center font-semibold lg:leading-[48px] lg:text-[42px] text-[#fffced] lg:max-w-6xl mt-8'>
+       <h4 className='chivo text-center capitalize font-semibold lg:leading-[48px] lg:text-[42px] text-[#fffced] lg:max-w-6xl mt-8'>
           A curated selection of work highlighting design clarity, <span className='text-[#b9b8b6]'>performance, and clean code.</span>
         </h4>
       

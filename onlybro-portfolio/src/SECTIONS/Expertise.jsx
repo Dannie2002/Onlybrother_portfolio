@@ -1,21 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Network from '../assets/Images/Networking.jpg'
+import Webdev from '../assets/Images/WebDev.jpg'
 import Design from '../assets/Images/Designing.jpg'
 import Mother from '../assets/Images/Motherboard.jpg'
 import noise from "../assets/Noise.png"
 import Service from '../assets/Images/Service_desk.jpg'
 import communication from '../assets/Images/communication.jpg'
 import Arrow from '../Components/Icons/Arrow'
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 
 const projects = [
   {
+    id:1,
     title: 'Networking',
     description: 'A minimal, responsive portfolio with custom animations and glassmorphism.',
     tech: ['React', 'Tailwind', 'Framer Motion'],
@@ -23,13 +20,15 @@ const projects = [
     image: Network
   },
   {
+      id:2,
     title: 'Web Development',
     description: 'I transformed raw data into actionable insights that supported informed business decisions',
     tech: ['SAP BOBJ', 'TABLEAU', 'Tailwind'],
     link: '#',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop'
+    image: Webdev
   },
   {
+      id:3,
     title: 'UI/UX Design',
     description: 'Analytics dashboard with cards, charts, and dark/light themes.',
     tech: ['React', 'Recharts', 'Tailwind'],
@@ -38,6 +37,7 @@ const projects = [
   },
 
     {
+        id:3,
     title: 'Hardware Repair',
     description: 'Analytics dashboard with cards, charts, and dark/light themes.',
     tech: ['React', 'Recharts', 'Tailwind'],
@@ -46,6 +46,7 @@ const projects = [
   },
 
       {
+          id:4,
     title: 'Service Desk Analysis',
     description: 'Analytics dashboard with cards, charts, and dark/light themes.',
     tech: ['React', 'Recharts', 'Tailwind'],
@@ -54,6 +55,7 @@ const projects = [
   },
   
      {
+        id:5,
     title: 'Communication and Collaboration',
     description: 'Analytics dashboard with cards, charts, and dark/light themes.',
     tech: ['React', 'Recharts', 'Tailwind'],
@@ -61,93 +63,83 @@ const projects = [
     image: communication
   },
 
-]
+];
 
-const ProjectCard = ({ project }) => {
-  const [isHovered, setIsHovered] = React.useState(false);
 
-  return (
-    <div 
-      className='group relative rounded-2xl overflow-hidden  bg-[#f3f2f0] box shadow-2xl'
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-        <div className='absolute group-hover:bg-gradient-to-t from-(--primary-color)/60 to-(--primary-color)/30 transition-all duration-500 bg-blend-multiply z-10 size-full bg-[#0b0b0d]/40'></div>
-        
-        <div className='w-full overflow-hidden h-[340px] lg:h-[490px] relative'>
-          <img
-            src={project.image}
-            alt={project.title}
-            className='object-cover w-full h-full filter grayscale transition-all ease-in-out duration-1000 group-hover:grayscale-0 group-hover:scale-105'
-          />
-          <img src={noise} alt="noise" className="absolute inset-0 w-full mix-blend-multiply opacity-40 h-full object-cover"/>
-          
-          {/* Content container that slides up on hover */}
-          <motion.div 
-            className='absolute bottom-2 left-4 right-4 z-10 flex flex-col'
-            animate={{ y: isHovered ? -100 : 0 }}
-            transition={{ duration: 0.55, ease: 'easeOut' }}
-          >
-            <div className='flex flex-col'>
-              <Arrow color='#b27f32' size={45} className='group-hover:animate-bounce' />
-              <h4 className='text-[#fffced] uppercase chivo font-semibold text-2xl'>{project.title}</h4>
-            </div>
 
-            {/* Description that appears on hover */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: isHovered ? 1 : 0 }}
-              transition={{ duration: 0.4, ease: 'easeOut' }}
-              className='mt-1.5 h-0'
-            >
-              <p className='text-[#fffced] text-[16px] pb-2 max-w-[370px] leading-relaxed zalando'>{project.description}</p>
-            </motion.div>
-          </motion.div>
-        </div>
 
-    </div>
-  )
-}
 
 const Expetise = () => {
 
-   useGSAP(() => {
-  gsap.from(".subheading", {
-    y: 100,
-    opacity: 0,
-    duration: 0.95,
-    scrollTrigger: {
-      trigger: ".subheading",
-      start: "top 80%",
-      end: "bottom top",
-      scrub: true,
-    }
-  });
-});
+ 
 
   return (
-    <section id='projects' className='Section_bg'>
-      <div className='Section_wrapper'>
-      <div className='flex flex-col items-start justify-center mb-8 lg:mt-12'>  
-          <h1 className='text-4xl  zalando font-semibold text-center lg:text-[20px] uppercase text-(--primary-color)'>
-           Expertise
+    <section className='Section_bg'>
+     <div className='Section_wrapper flex items-start justify-start flex-col'> 
+                 <h1 className='text-[14px] zalando font-bold  text-center lg:text-[16px] uppercase text-[#b27f32]'>
+           My Expertise
           </h1>
-          <div className='w-10 h-1 mt-6 bg-[#036043]'></div>
-      
-        <h4
-       
-        className='subheading lg:leading-[48px] lg:text-[42px] text-[#4a4a4a] lg:max-w-6xl mt-10'>
-          Enhancing network performance through robust design and expert implementation.
+          <div className='w-10 h-1 mt-3 bg-[#b27f32]'></div>
+       <h4 className='zalando text-left capitalize font-semibold lg:leading-[32px] lg:text-[32px] text-[#4a4a4a] lg:max-w-6xl mt-8'>
+          A curated selection of work highlighting design clarity, <span className='text-[#605f5d]'>performance, and clean code.</span>
         </h4>
+  
+    <div className='Grid_4 lg:gap-12 '>
+      {projects.slice(0,4).map((project,index)=>(
+
+        <div key={project.id} className='group relative '>
+          
+          <div className='h-[470px] relative'>
+            <img src={project.image} alt={project.title} className='object-cover grayscale group-hover:grayscale-0 size-full' />
+            <img src={noise} alt="noise" className="absolute inset-0 size-full mix-blend-multiply opacity-40 object-cover"/>
+            <div className='absolute inset-0 group-hover:bg-gradient-to-t from-(--primary-color)/60 to-(--primary-color)/30 to-transparent transition-all duration-500 bg-blend-multiply z-10 size-full'></div>
+            
+          </div>
+
+          <div className='flex items-center justify-between py-4'>
+            <h4 className='text-[#4a4a4a] uppercase chivo nefesta text-[24px]'>
+                {project.title}
+            </h4>
+            <Arrow color='#b27f32' size={35} className='group-hover:animate-bounce' />
+           </div>
+
+        </div>  
+        
+      ))}
+    
+
+    </div>
+
+
+      <div className='mt-4 flex flex-row items-center justify-start gap-2'>
+        <button
+         
+           className='inline-flex items-center gap-2 p-2 bg-[#4a4a4a]/40 text-white rounded-full shadow hover:bg-[#0f4f85]'
+        >
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='w-4 h-4'>
+            <path d='M15 18l-6-6 6-6' strokeLinecap='round' strokeLinejoin='round' />
+          </svg>
+          
+        </button>
+
+        <button
+        
+          className='inline-flex items-center gap-2 p-2 bg-[#4a4a4a]/40 text-white rounded-full shadow hover:bg-[#0f4f85]'
+        >
+          
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='w-4 h-4'>
+            <path d='M9 6l6 6-6 6' strokeLinecap='round' strokeLinejoin='round' />
+          </svg>
+        </button>
       </div>
 
-      <div className='grid grid-cols-1 gap-6 mt-12 lg:mt-22 lg:gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-        {projects.map((p, i) => (
-          <ProjectCard key={p.title ?? i} project={p} />
-        ))}
-      </div>
+
+
+
+
+
     </div>
-    </section>
+  </section>
   )
 }
 

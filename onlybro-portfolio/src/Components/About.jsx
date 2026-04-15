@@ -53,7 +53,7 @@ const clipPath = useTransform(
              
               <motion.div ref={ref} style={{ clipPath }} className="relative flex mt-0 items-end justify-end ">
               
-                <img src={Service} alt="research" className="w-full grayscale clip h-[430px]  object-cover"/>
+                <img src={Service} alt="research" className="w-full grayscale clip h-[470px]  object-cover"/>
                  
                
               </motion.div>

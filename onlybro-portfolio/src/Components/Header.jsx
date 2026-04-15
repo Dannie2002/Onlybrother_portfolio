@@ -5,7 +5,7 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 z-50 w-full ">
+    <div className="fixed bg-[#0b0b0d]/40 backdrop-blur-2xl  top-0 left-0 z-50 w-full ">
       <div className='flex items-center justify-between px-24 py-4 lg:px-36'>
         <a href="#home" className="flex items-center">
           <h1 className=" text-[#b27f32] text-[16px] zalando uppercase font-bold ">

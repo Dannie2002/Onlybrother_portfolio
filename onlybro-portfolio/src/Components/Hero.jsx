@@ -51,7 +51,7 @@ useGSAP(() => {
                <div className='absolute size-96 opacity-5 blur-2xl bg-[#b27f32]  left-[80%] z-0'> </div> 
                 {/* Arrow particles */}
                <DottedArrow color="#b27f32" size={70} className="absolute z-50 bottom-0 left-0"  />
-               <img src={noise} alt="Noise" className="absolute top-0 left-0 w-full h-full object-cover opacity-40 z-10" />
+               <img src={noise} alt="Noise" className="absolute top-0 left-0 w-full h-full object-cover opacity-20 z-10" />
                <div className=' absolute  top-0 -left-290  object-cover z-10'>
                    <img src={cloud} alt="Cloud" className="" />
                </div>
